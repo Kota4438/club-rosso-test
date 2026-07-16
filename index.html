@@ -4,24 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>吉沢孝太郎"祝還暦"イベント 特設サイト</title>
+    <!-- ⚠️ 検索エンジンに絶対に登録させない設定 -->
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="password-locked">
+<!-- 💡 「password-locked」クラスを削除し、最初からロックを解除した状態にしています -->
+<body>
 
-    <div id="password-overlay">
-        <div class="password-box">
-            <h2>ENTER PASSWORD</h2>
-            <p class="pass-msg">
-                こちらは関係者・ご招待客専用の特設サイトです。<br>
-                事前にお送りしたパスワードを入力してください。
-            </p>
-            <div class="pass-form">
-                <input type="password" id="password-input" placeholder="パスワードを入力">
-                <button onclick="checkPassword()">認証</button>
-            </div>
-        </div>
-    </div>
+    <!-- 💡 ロック画面（password-overlay）のコードを完全に削除しました -->
 
     <header>
         <nav class="nav-container">
@@ -50,7 +40,6 @@
             <h1 class="retro-title-main">吉沢孝太郎 "祝還暦" イベント</h1>
             
             <div class="retro-title-sub">
-                <!-- 💡 1. 元宝塚歌劇団花組男役のフォントサイズを1段階上げました（font-size: 1.15remを追加） -->
                 <span class="small-prefix" style="font-size: 1.15rem !important;">元宝塚歌劇団花組男役</span>
                 <span class="retro-star-name">真丘奈央</span>
                 <span class="onstage-text">オンステージ</span>
@@ -65,7 +54,6 @@
             <div class="retro-venue-box">
                 <p class="venue-name">CLUB ROSSO</p>
                 <p class="venue-address">渋谷区松濤1-29-1 渋谷クロスロードビルB1F</p>
-                <!-- 💡 2. 料金のフォントサイズより1段階小さい文字で、右側に(全席自由・ワンドリンク付)を追加しました -->
                 <p class="event-price" style="color: #ffb800 !important; font-size: 1.2rem !important;">料金：4,500円/人 <span style="font-size: 0.8em; font-weight: normal; margin-left: 4px;">(全席自由・ワンドリンク付)</span></p>
             </div>
 
@@ -78,25 +66,7 @@
         <p>&copy; 2026 Event Organizer. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function checkPassword() {
-            const input = document.getElementById("password-input").value;
-            // パスワードは「20260815」
-            if (input === "20260815") {
-                document.body.classList.remove("password-locked");
-                localStorage.setItem("site_authenticated", "true");
-            } else {
-                alert("パスワードが正しくありません。");
-            }
-        }
-
-        // ページ読み込み時に認証状態をチェック
-        window.onload = function() {
-            if (localStorage.getItem("site_authenticated") === "true") {
-                document.body.classList.remove("password-locked");
-            }
-        }
-    </script>
+    <!-- 💡 不要になったパスワード判定のスクリプトを完全に削除しました -->
 
 </body>
 </html>
