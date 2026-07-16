@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉沢孝太郎"祝還暦"イベント 特設サイト</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="password-locked">
+
+    <div id="password-overlay">
+        <div class="password-box">
+            <h2>ENTER PASSWORD</h2>
+            <p class="pass-msg">
+                こちらは関係者・ご招待客専用の特設サイトです。<br>
+                事前にお送りしたパスワードを入力してください。
+            </p>
+            <div class="pass-form">
+                <input type="password" id="password-input" placeholder="パスワードを入力">
+                <button onclick="checkPassword()">認証</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="Celebrating 60th Birthday" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Top</a></li>
+                <li><a href="access.html">Access</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="ticket.html" class="btn-ticket">Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider-background">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+    </div>
+
+    <main class="hero-scroll-container">
+        
+        <div class="retro-container">
+            <h1 class="retro-title-main">吉沢孝太郎 "祝還暦" イベント</h1>
+            
+            <div class="retro-title-sub">
+                <!-- 💡 1. 元宝塚歌劇団花組男役のフォントサイズを1段階上げました（font-size: 1.15remを追加） -->
+                <span class="small-prefix" style="font-size: 1.15rem !important;">元宝塚歌劇団花組男役</span>
+                <span class="retro-star-name">真丘奈央</span>
+                <span class="onstage-text">オンステージ</span>
+            </div>
+
+            <p class="retro-date-clean">2026.8.15 (Sat)</p>
+
+            <p class="retro-time-clean" style="font-family: 'Georgia', sans-serif; font-size: 1.4rem; color: #ffffff; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                Open 11:30am / Start 12:00pm
+            </p>
+
+            <div class="retro-venue-box">
+                <p class="venue-name">CLUB ROSSO</p>
+                <p class="venue-address">渋谷区松濤1-29-1 渋谷クロスロードビルB1F</p>
+                <!-- 💡 2. 料金のフォントサイズより1段階小さい文字で、右側に(全席自由・ワンドリンク付)を追加しました -->
+                <p class="event-price" style="color: #ffb800 !important; font-size: 1.2rem !important;">料金：4,500円/人 <span style="font-size: 0.8em; font-weight: normal; margin-left: 4px;">(全席自由・ワンドリンク付)</span></p>
+            </div>
+
+            <a href="ticket.html" class="cta-button retro-btn">チケットを申し込む</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Event Organizer. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById("password-input").value;
+            // パスワードは「20260815」
+            if (input === "20260815") {
+                document.body.classList.remove("password-locked");
+                localStorage.setItem("site_authenticated", "true");
+            } else {
+                alert("パスワードが正しくありません。");
+            }
+        }
+
+        // ページ読み込み時に認証状態をチェック
+        window.onload = function() {
+            if (localStorage.getItem("site_authenticated") === "true") {
+                document.body.classList.remove("password-locked");
+            }
+        }
+    </script>
+
+</body>
+</html>
