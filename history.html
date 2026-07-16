@@ -42,7 +42,6 @@
             font-weight: bold;
         }
         
-        /* 昭和のヒーローｓの上の余白を削る */
         .history-hr {
             border: 0;
             border-top: 1px dashed #eee;
@@ -53,7 +52,7 @@
             font-size: 1.3rem;
             color: #d4af37;
             font-weight: bold;
-            margin: 10px 0 15px 0; /* 余白を最小限に */
+            margin: 10px 0 15px 0;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
@@ -156,8 +155,7 @@
             <h3 class="history-section-title">👉 昭和のヒーローｓ｜Heroes of the Showa Era</h3>
             <div class="slider-container">
                 <div class="slider-wrapper">
-                    <!-- 💡 初期表示される画像を「hero (1).jpeg」に合わせ、かつ大文字小文字の揺れに対応 -->
-                    <img src="hero (1).jpeg" alt="昭和のヒーロー" id="hero-img" onerror="this.src='hero (1).JPEG'">
+                    <img src="hero (1).JPEG" alt="昭和のヒーロー" id="hero-img" onerror="this.src='hero (1).jpeg'">
                 </div>
                 <button class="slide-btn btn-prev" onclick="changeHeroSlide(-1)">&lt;</button>
                 <button class="slide-btn btn-next" onclick="changeHeroSlide(1)">&gt;</button>
@@ -170,12 +168,11 @@
             <h3 class="history-section-title">👉 昭和の夏の思い出｜Memories of Showa Summers</h3>
             <div class="slider-container">
                 <div class="slider-wrapper">
-                    <!-- 💡 初期表示される画像を実際のファイル名「1 1.jpeg」に変更 -->
-                    <img src="1 1.jpeg" alt="昭和の夏の思い出" id="summer-img" onerror="this.src='1 1.JPEG'">
+                    <img src="１.JPEG" alt="昭和の夏の思い出" id="summer-img" onerror="this.src='１.jpeg'">
                 </div>
                 <button class="slide-btn btn-prev" onclick="changeSummerSlide(-1)">&lt;</button>
                 <button class="slide-btn btn-next" onclick="changeSummerSlide(1)">&gt;</button>
-                <div class="slide-counter" id="summer-counter">1 / 32</div>
+                <div class="slide-counter" id="summer-counter">1 / 33</div>
             </div>
 
             <p>
@@ -188,7 +185,7 @@
         <p>© 2026 Event Organizer. All Rights Reserved.</p>
     </footer>
 
-    <!-- スライドプログラム（拡張子エラー自動判別機能付き） -->
+    <!-- スライドプログラム -->
     <script>
         function loadImageWithFallback(imgElement, baseName, extensions) {
             let index = 0;
@@ -217,16 +214,18 @@
             heroIndex += direction;
             if (heroIndex < 0) heroIndex = heroList.length - 1;
             if (heroIndex >= heroList.length) heroIndex = 0;
-            const exts = heroIndex >= 9 ? [".jpg", ".JPG", ".jpeg", ".JPEG"] : [".JPEG", ".jpeg", ".jpg", ".JPG"];
+            // hero(x)は基本大文字.JPEG、(1)などは小文字.jpgなので自動判別
+            const exts = heroList[heroIndex].startsWith("hero") ? [".JPEG", ".jpeg", ".jpg", ".JPG"] : [".jpg", ".JPG", ".jpeg", ".JPEG"];
             loadImageWithFallback(heroImg, heroList[heroIndex], exts);
             heroCounter.textContent = `${heroIndex + 1} / ${heroList.length}`;
         }
 
-        // 2. 昭和の夏の思い出（半角スペース形式に完全修正。25番は欠番のため除外、合計32枚）
+        // 2. 昭和の夏の思い出（GitHub上の「全角数字」に完全対応。25は欠番のため除外、合計33枚）
         const summerList = [
-            "1 1", "1 2", "1 3", "1 4", "1 5", "1 6", "1 7", "1 8", "1 9", "2 0",
-            "2 1", "2 2", "2 3", "2 4", "2 6", "2 7", "2 8", "2 9", "3 0",
-            "3 1", "3 2", "3 3", "3 4"
+            "１", "２", "３", "４", "５", "６", "７", "８", "９", "１０",
+            "１１", "１２", "１３", "１４", "１５", "１６", "１７", "１８", "１９", "２０",
+            "２１", "２２", "２３", "２４", "２６", "２７", "２８", "２９", "３０",
+            "３１", "３２", "３３", "３４"
         ];
         let summerIndex = 0;
         const summerImg = document.getElementById('summer-img');
@@ -236,7 +235,8 @@
             summerIndex += direction;
             if (summerIndex < 0) summerIndex = summerList.length - 1;
             if (summerIndex >= summerList.length) summerIndex = 0;
-            const exts = [".JPEG", ".jpeg", ".jpg", ".JPG"];
+            // 30番だけ小文字の .jpeg になっている点も自動カバー
+            const exts = summerList[summerIndex] === "３０" ? [".jpeg", ".JPEG", ".jpg", ".JPG"] : [".JPEG", ".jpeg", ".jpg", ".JPG"];
             loadImageWithFallback(summerImg, summerList[summerIndex], exts);
             summerCounter.textContent = `${summerIndex + 1} / ${summerList.length}`;
         }
