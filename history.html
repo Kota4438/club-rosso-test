@@ -172,7 +172,8 @@
                 </div>
                 <button class="slide-btn btn-prev" onclick="changeSummerSlide(-1)">&lt;</button>
                 <button class="slide-btn btn-next" onclick="changeSummerSlide(1)">&gt;</button>
-                <div class="slide-counter" id="summer-counter">1 / 33</div>
+                <!-- 💡 画像の総数を 33枚 から 37枚 に更新 -->
+                <div class="slide-counter" id="summer-counter">1 / 37</div>
             </div>
 
             <p>
@@ -214,18 +215,17 @@
             heroIndex += direction;
             if (heroIndex < 0) heroIndex = heroList.length - 1;
             if (heroIndex >= heroList.length) heroIndex = 0;
-            // hero(x)は基本大文字.JPEG、(1)などは小文字.jpgなので自動判別
             const exts = heroList[heroIndex].startsWith("hero") ? [".JPEG", ".jpeg", ".jpg", ".JPG"] : [".jpg", ".JPG", ".jpeg", ".JPEG"];
             loadImageWithFallback(heroImg, heroList[heroIndex], exts);
             heroCounter.textContent = `${heroIndex + 1} / ${heroList.length}`;
         }
 
-        // 2. 昭和の夏の思い出（GitHub上の「全角数字」に完全対応。25は欠番のため除外、合計33枚）
+        // 2. 昭和の夏の思い出（３５〜３８.JPEGを追加して全37枚に変更）
         const summerList = [
             "１", "２", "３", "４", "５", "６", "７", "８", "９", "１０",
             "１１", "１２", "１３", "１４", "１５", "１６", "１７", "１８", "１９", "２０",
             "２１", "２２", "２３", "２４", "２６", "２７", "２８", "２９", "３０",
-            "３１", "３２", "３３", "３４"
+            "３１", "３２", "３３", "３４", "３５", "３６", "３７", "３８"
         ];
         let summerIndex = 0;
         const summerImg = document.getElementById('summer-img');
@@ -235,7 +235,6 @@
             summerIndex += direction;
             if (summerIndex < 0) summerIndex = summerList.length - 1;
             if (summerIndex >= summerList.length) summerIndex = 0;
-            // 30番だけ小文字の .jpeg になっている点も自動カバー
             const exts = summerList[summerIndex] === "３０" ? [".jpeg", ".JPEG", ".jpg", ".JPG"] : [".JPEG", ".jpeg", ".jpg", ".JPG"];
             loadImageWithFallback(summerImg, summerList[summerIndex], exts);
             summerCounter.textContent = `${summerIndex + 1} / ${summerList.length}`;
