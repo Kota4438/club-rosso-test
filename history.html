@@ -3,129 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60年の歩み - 吉沢孝太郎"祝還暦"イベント</title>
+    <title>吉沢孝太郎"祝還暦"イベント 特設サイト</title>
     <!-- ⚠️ 検索エンジンに絶対に登録させない設定 -->
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="style.css">
     <style>
-        .history-construction-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 30px 20px;
-            text-align: center;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        /* カウントダウンタイマー全体のデザイン */
+        .countdown-container {
+            margin: 15px auto 25px auto;
+            padding: 15px 10px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            max-width: 450px;
         }
-        .construction-status {
-            display: inline-block;
-            background: #8b0000;
-            color: #fff;
-            padding: 6px 16px;
+        .countdown-label {
             font-size: 0.9rem;
-            font-weight: bold;
-            border-radius: 50px;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .history-main-title {
-            font-size: 2rem;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .history-lead {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        
-        .history-hr {
-            border: 0;
-            border-top: 1px dashed #eee;
-            margin: 15px 0;
-        }
-        
-        .history-section-title {
-            font-size: 1.3rem;
             color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
             font-weight: bold;
-            margin: 10px 0 15px 0;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
-
-        /* スライドショーのスタイル */
-        .slider-container {
-            position: relative;
-            max-width: 500px;
-            margin: 0 auto 10px auto;
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .slider-wrapper {
-            position: relative;
-            width: 100%;
-            height: 380px;
+        .countdown-display {
             display: flex;
-            align-items: center;
             justify-content: center;
-            overflow: hidden;
-            background: #f7f7f7;
-            border-radius: 4px;
+            gap: 15px;
         }
-        .slider-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
         }
-        
-        .slide-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            width: 40px;
-            height: 40px;
+        .countdown-number {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,184,0,0.6);
+            line-height: 1;
+        }
+        .countdown-unit {
+            font-size: 0.75rem;
+            color: #cccccc;
+            margin-top: 4px;
+        }
+        .countdown-expired {
             font-size: 1.2rem;
+            color: #ffb800;
             font-weight: bold;
-            cursor: pointer;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-        .slide-btn:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-        .btn-prev { left: 25px; }
-        .btn-next { right: 25px; }
-        
-        .slide-counter {
-            margin-top: 15px;
-            font-size: 0.95rem;
-            color: #666;
-            font-weight: bold;
-        }
-
-        .back-to-profile {
-            display: inline-block;
-            margin-top: 30px;
-            color: #8b0000;
-            font-weight: bold;
-            text-decoration: underline;
+            letter-spacing: 1px;
         }
     </style>
 </head>
-<body style="padding-top: 110px;">
+<body>
 
-    <!-- ナビゲーションメニュー -->
     <header>
         <nav class="nav-container">
             <div class="logo">
@@ -134,7 +66,7 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Top</a></li>
+                <li><a href="index.html" class="active">Top</a></li>
                 <li><a href="access.html">Access</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="ticket.html" class="btn-ticket">Ticket</a></li>
@@ -142,104 +74,86 @@
         </nav>
     </header>
 
-    <!-- メインコンテンツ -->
-    <main class="main-content">
-        <div class="history-construction-container">
-            <span class="construction-status">COMING SOON</span>
-            <h2 class="history-main-title">吉沢孝太郎 60年の歩み</h2>
-            <p class="history-lead">公開まで今しばらくお待ちください。</p>
+    <div class="slider-background">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+    </div>
 
-            <hr class="history-hr">
-
-            <!-- 📸 セクション1：「昭和のヒーローｓ」 -->
-            <h3 class="history-section-title">👉 昭和のヒーローｓ｜Heroes of the Showa Era</h3>
-            <div class="slider-container">
-                <div class="slider-wrapper">
-                    <!-- 💡 初期表示される画像を「hero (17).JPEG」に変更 -->
-                    <img src="hero (17).JPEG" alt="昭和のヒーロー" id="hero-img" onerror="this.src='hero (17).jpeg'">
-                </div>
-                <button class="slide-btn btn-prev" onclick="changeHeroSlide(-1)">&lt;</button>
-                <button class="slide-btn btn-next" onclick="changeHeroSlide(1)">&gt;</button>
-                <!-- 💡 画像の総数を 12枚 から 13枚 に更新 -->
-                <div class="slide-counter" id="hero-counter">1 / 13</div>
+    <main class="hero-scroll-container">
+        
+        <div class="retro-container">
+            <h1 class="retro-title-main">吉沢孝太郎 "祝還暦" イベント</h1>
+            
+            <div class="retro-title-sub">
+                <span class="small-prefix" style="font-size: 1.15rem !important;">元宝塚歌劇団花組男役</span>
+                <span class="retro-star-name">真丘奈央</span>
+                <span class="onstage-text">オンステージ</span>
             </div>
 
-            <hr class="history-hr">
+            <p class="retro-date-clean">2026.8.15 (Sat)</p>
 
-            <!-- 📸 セクション2：「昭和の夏の思い出」 -->
-            <h3 class="history-section-title">👉 昭和の夏の思い出｜Memories of Showa Summers</h3>
-            <div class="slider-container">
-                <div class="slider-wrapper">
-                    <img src="１.JPEG" alt="昭和の夏の思い出" id="summer-img" onerror="this.src='１.jpeg'">
-                </div>
-                <button class="slide-btn btn-prev" onclick="changeSummerSlide(-1)">&lt;</button>
-                <button class="slide-btn btn-next" onclick="changeSummerSlide(1)">&gt;</button>
-                <div class="slide-counter" id="summer-counter">1 / 37</div>
-            </div>
-
-            <p>
-                <a href="profile.html" class="back-to-profile">← プロフィールページに戻る</a>
+            <p class="retro-time-clean" style="font-family: 'Georgia', sans-serif; font-size: 1.4rem; color: #ffffff; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                Open 11:30am / Start 12:00pm
             </p>
+
+            <!-- ⏰ 3. カウントダウンタイマー表示エリアを追加しました -->
+            <div class="countdown-container">
+                <div class="countdown-label">開演まであと</div>
+                <div id="countdown" class="countdown-display">
+                    <div class="countdown-item"><span id="days" class="countdown-number">00</span><span class="countdown-unit">日</span></div>
+                    <div class="countdown-item"><span id="hours" class="countdown-number">00</span><span class="countdown-unit">時間</span></div>
+                    <div class="countdown-item"><span id="minutes" class="countdown-number">00</span><span class="countdown-unit">分</span></div>
+                    <div class="countdown-item"><span id="seconds" class="countdown-number">00</span><span class="countdown-unit">秒</span></div>
+                </div>
+            </div>
+
+            <div class="retro-venue-box">
+                <p class="venue-name">CLUB ROSSO</p>
+                <p class="venue-address">渋谷区松濤1-29-1 渋谷クロスロードビルB1F</p>
+                <p class="event-price" style="color: #ffb800 !important; font-size: 1.2rem !important;">料金：4,500円/人 <span style="font-size: 0.8em; font-weight: normal; margin-left: 4px;">(全席自由・ワンドリンク付)</span></p>
+            </div>
+
+            <a href="ticket.html" class="cta-button retro-btn">チケットを申し込む</a>
         </div>
+
     </main>
 
     <footer>
-        <p>© 2026 Event Organizer. All Rights Reserved.</p>
+        <p>&copy; 2026 Event Organizer. All Rights Reserved.</p>
     </footer>
 
-    <!-- スライドプログラム -->
+    <!-- ⏰ タイマーをリアルタイム駆動させるプログラムを追加しました -->
     <script>
-        function loadImageWithFallback(imgElement, baseName, extensions) {
-            let index = 0;
-            imgElement.src = baseName + extensions[index];
-            imgElement.onerror = function() {
-                index++;
-                if (index < extensions.length) {
-                    imgElement.src = baseName + extensions[index];
-                } else {
-                    imgElement.onerror = null;
-                }
-            };
+        // 目標日時を設定 (2026年8月15日 12:00 PM 開演)
+        const targetDate = new Date("2026/08/15 12:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // 各単位の計算
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 画面の数字を書き換え（2桁表示に揃える）
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            // イベント当日を過ぎた場合の表示
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("countdown").innerHTML = "<div class='countdown-expired'>本日のイベントは終了いたしました。</div>";
+            }
         }
 
-        // 1. 昭和のヒーローｓ（先頭に hero (17) を追加して全13枚に変更）
-        const heroList = [
-            "hero (17)", "hero (1)", "hero (11)", "hero (10)", "hero (2)",
-            "hero (12)", "hero (13)", "hero (14)", "hero (15)",
-            "hero (16)", "(1)", "(2)", "(3)"
-        ];
-        let heroIndex = 0;
-        const heroImg = document.getElementById('hero-img');
-        const heroCounter = document.getElementById('hero-counter');
-
-        function changeHeroSlide(direction) {
-            heroIndex += direction;
-            if (heroIndex < 0) heroIndex = heroList.length - 1;
-            if (heroIndex >= heroList.length) heroIndex = 0;
-            const exts = heroList[heroIndex].startsWith("hero") ? [".JPEG", ".jpeg", ".jpg", ".JPG"] : [".jpg", ".JPG", ".jpeg", ".JPEG"];
-            loadImageWithFallback(heroImg, heroList[heroIndex], exts);
-            heroCounter.textContent = `${heroIndex + 1} / ${heroList.length}`;
-        }
-
-        // 2. 昭和の夏の思い出（全37枚）
-        const summerList = [
-            "１", "２", "３", "４", "５", "６", "７", "８", "９", "１０",
-            "１１", "１２", "１３", "１４", "１５", "１６", "１７", "１８", "１９", "２０",
-            "２１", "２２", "２３", "２４", "２６", "２７", "２８", "２９", "３０",
-            "３１", "３２", "３３", "３４", "３５", "３６", "３７", "３８"
-        ];
-        let summerIndex = 0;
-        const summerImg = document.getElementById('summer-img');
-        const summerCounter = document.getElementById('summer-counter');
-
-        function changeSummerSlide(direction) {
-            summerIndex += direction;
-            if (summerIndex < 0) summerIndex = summerList.length - 1;
-            if (summerIndex >= summerList.length) summerIndex = 0;
-            const exts = summerList[summerIndex] === "３０" ? [".jpeg", ".JPEG", ".jpg", ".JPG"] : [".JPEG", ".jpeg", ".jpg", ".JPG"];
-            loadImageWithFallback(summerImg, summerList[summerIndex], exts);
-            summerCounter.textContent = `${summerIndex + 1} / ${summerList.length}`;
-        }
+        // 1秒ごとにタイマーを更新する
+        const timerInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // ページを開いた瞬間に1回目を実行
     </script>
+
 </body>
 </html>
