@@ -155,11 +155,13 @@
             <h3 class="history-section-title">👉 昭和のヒーローｓ｜Heroes of the Showa Era</h3>
             <div class="slider-container">
                 <div class="slider-wrapper">
-                    <img src="hero (1).JPEG" alt="昭和のヒーロー" id="hero-img" onerror="this.src='hero (1).jpeg'">
+                    <!-- 💡 初期表示される画像を「hero (17).JPEG」に変更 -->
+                    <img src="hero (17).JPEG" alt="昭和のヒーロー" id="hero-img" onerror="this.src='hero (17).jpeg'">
                 </div>
                 <button class="slide-btn btn-prev" onclick="changeHeroSlide(-1)">&lt;</button>
                 <button class="slide-btn btn-next" onclick="changeHeroSlide(1)">&gt;</button>
-                <div class="slide-counter" id="hero-counter">1 / 12</div>
+                <!-- 💡 画像の総数を 12枚 から 13枚 に更新 -->
+                <div class="slide-counter" id="hero-counter">1 / 13</div>
             </div>
 
             <hr class="history-hr">
@@ -172,7 +174,6 @@
                 </div>
                 <button class="slide-btn btn-prev" onclick="changeSummerSlide(-1)">&lt;</button>
                 <button class="slide-btn btn-next" onclick="changeSummerSlide(1)">&gt;</button>
-                <!-- 💡 画像の総数を 33枚 から 37枚 に更新 -->
                 <div class="slide-counter" id="summer-counter">1 / 37</div>
             </div>
 
@@ -201,9 +202,9 @@
             };
         }
 
-        // 1. 昭和のヒーローｓ（全12枚）
+        // 1. 昭和のヒーローｓ（先頭に hero (17) を追加して全13枚に変更）
         const heroList = [
-            "hero (1)", "hero (11)", "hero (10)", "hero (2)",
+            "hero (17)", "hero (1)", "hero (11)", "hero (10)", "hero (2)",
             "hero (12)", "hero (13)", "hero (14)", "hero (15)",
             "hero (16)", "(1)", "(2)", "(3)"
         ];
@@ -220,7 +221,7 @@
             heroCounter.textContent = `${heroIndex + 1} / ${heroList.length}`;
         }
 
-        // 2. 昭和の夏の思い出（３５〜３８.JPEGを追加して全37枚に変更）
+        // 2. 昭和の夏の思い出（全37枚）
         const summerList = [
             "１", "２", "３", "４", "５", "６", "７", "８", "９", "１０",
             "１１", "１２", "１３", "１４", "１５", "１６", "１７", "１８", "１９", "２０",
