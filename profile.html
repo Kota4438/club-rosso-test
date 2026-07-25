@@ -6,12 +6,11 @@
     <title>Profile - 吉沢孝太郎"祝還暦"イベント</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="style.css">
-    <!-- 文字化けを強制的に防ぐ設定 -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 
-    <!-- ナビゲーションメニュー（ヘッダーメニューは元通り4つのみです） -->
+    <!-- ナビゲーションメニュー（元の4項目に戻しています） -->
     <header>
         <nav class="nav-container">
             <div class="logo">
@@ -38,7 +37,7 @@
             <!-- 1段目：＜出演者＞ 真丘奈央 -->
             <div class="profile-card-v">
                 <div class="profile-img-container-v">
-                    <img id="img-cast2" src="cast2.jpg" alt="真丘奈央" class="profile-img-v">
+                    <img src="masaoka.jpg" alt="真丘奈央" class="profile-img-v">
                 </div>
                 <div class="profile-text-v">
                     <span class="section-badge">CAST</span>
@@ -56,7 +55,7 @@
             <!-- 2段目：＜出演者＞ 紫芝のばら -->
             <div class="profile-card-v">
                 <div class="profile-img-container-v">
-                    <img id="img-cast3" src="cast3.jpg" alt="紫芝のばら" class="profile-img-v">
+                    <img src="shishiba.jpg" alt="紫芝のばら" class="profile-img-v">
                 </div>
                 <div class="profile-text-v">
                     <span class="section-badge">CAST</span>
@@ -71,7 +70,7 @@
             <!-- 最下段（3段目）：＜主催者紹介＞ 吉沢孝太郎 -->
             <div class="profile-card-v">
                 <div class="profile-img-container-v">
-                    <img id="img-cast1" src="cast1.jpg" alt="吉沢孝太郎" class="profile-img-v">
+                    <img src="yoshizawa.jpg" alt="吉沢孝太郎" class="profile-img-v">
                 </div>
                 <div class="profile-text-v">
                     <span class="section-badge">ORGANIZER</span>
@@ -80,7 +79,7 @@
                         1966年8月19日（丙午年）、群馬県伊勢崎市生まれ。（バブル時代頂点だった）1990年に早稲田大学社会科学部を卒業し、同年に証券業界で社会人デビュー。その後キャリアの半分を欧州で過ごす。2008年に英国永住権を取得。2014年に英国拠点の個人事業主として独立し、欧州と日本間のクロスボーダービジネス支援に従事。これまでに英国大手金融メディア『Financial Times』、日本経済新聞欧州社、英国および日本のスタートアップ企業に対する業務支援を手がける。
                     </p>
                     
-                    <!-- 📍 「Coming Soon」を削除し、吉沢孝太郎の枠内のみにリンクボタンを設置 -->
+                    <!-- 「60年の歩み」ボタン（Coming Soon等は除去済みです） -->
                     <div style="margin-top: 20px;">
                         <a href="history-test.html" style="display: inline-block; padding: 10px 20px; background-color: #d4af37; color: #1a1a1a; text-decoration: none; font-weight: bold; border-radius: 4px;">
                             吉沢孝太郎 60年の歩みを見る &raquo;
@@ -95,30 +94,6 @@
     <footer>
         <p>© 2026 Event Organizer. All Rights Reserved.</p>
     </footer>
-
-    <!-- 💡 写真表示用の補正スクリプト（元通りの動作に復元） -->
-    <script>
-        function setupImageFallback(imgId, baseName) {
-            const imgEl = document.getElementById(imgId);
-            if (!imgEl) return;
-
-            const extensions = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'];
-            let extIndex = 0;
-
-            imgEl.onerror = function() {
-                if (extIndex < extensions.length) {
-                    imgEl.src = baseName + '.' + extensions[extIndex];
-                    extIndex++;
-                } else {
-                    imgEl.onerror = null; 
-                }
-            };
-        }
-
-        setupImageFallback('img-cast2', 'cast2');
-        setupImageFallback('img-cast3', 'cast3');
-        setupImageFallback('img-cast1', 'cast1');
-    </script>
 
 </body>
 </html>
