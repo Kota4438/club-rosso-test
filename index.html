@@ -3,136 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【テストサイト】吉沢孝太郎"祝還暦"イベント 特設サイト</title>
-    <!-- ⚠️ 検索エンジンに絶対に登録させない設定 -->
+    <title>吉沢孝太郎 60年の歩み - 特設サイト</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
-        /* 🔐 パスワード画面のスタイル */
-        #password-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #1a1a1a;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+        /* 60年の歩み ページ用スタイル */
+        .history-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
         }
-        .pass-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid #d4af37;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-        .pass-box h2 {
-            color: #d4af37;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-        }
-        .pass-input {
-            padding: 12px;
-            font-size: 1.2rem;
-            width: 220px;
-            border: 1px solid #555;
-            border-radius: 4px;
-            text-align: center;
-            margin-bottom: 20px;
-            background: #fff;
-            color: #333;
-        }
-        .pass-btn {
-            background: #8b0000;
-            color: #fff;
-            border: none;
-            padding: 12px 35px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-            letter-spacing: 1px;
-        }
-        .pass-btn:hover {
-            background: #a00000;
-        }
-        #pass-error {
-            color: #ff4444;
+        .back-to-profile {
+            display: inline-block;
             margin-top: 15px;
-            display: none;
-            font-weight: bold;
-        }
-
-        /* ⏰ カウントダウンタイマーのデザイン */
-        .countdown-container {
-            margin: 15px auto 25px auto;
-            padding: 15px 10px;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid #d4af37;
-            border-radius: 6px;
-            max-width: 450px;
-        }
-        .countdown-label {
-            font-size: 0.9rem;
             color: #d4af37;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
             font-weight: bold;
+            transition: opacity 0.3s;
         }
-        .countdown-display {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        .back-to-profile:hover {
+            opacity: 0.8;
+            text-decoration: underline;
         }
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 60px;
+        .timeline-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #d4af37;
+            padding: 25px;
+            margin-bottom: 35px;
+            border-radius: 0 8px 8px 0;
         }
-        .countdown-number {
-            font-family: 'Georgia', serif;
-            font-size: 2rem;
+        .timeline-era {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             font-weight: bold;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255,184,0,0.6);
-            line-height: 1;
-        }
-        .countdown-unit {
-            font-size: 0.75rem;
-            color: #cccccc;
-            margin-top: 4px;
-        }
-        .countdown-expired {
-            font-size: 1.2rem;
-            color: #ffb800;
-            font-weight: bold;
-            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔐 パスワード入力オーバーレイ -->
-    <div id="password-screen">
-        <div class="pass-box">
-            <h2>CLUB ROSSO (TEST)</h2>
-            <p style="margin-bottom: 25px; font-size: 0.95rem; color: #ccc;">テスト用パスワード「rosso」を入力してください</p>
-            <input type="password" id="site-password" class="pass-input" placeholder="パスワードを入力">
-            <br>
-            <button onclick="checkPassword()" class="pass-btn">入場する</button>
-            <p id="pass-error">パスワードが違います</p>
-        </div>
-    </div>
-
-    <!-- トップページ本編 -->
+    <!-- ナビゲーションメニュー -->
     <header>
         <nav class="nav-container">
             <div class="logo">
@@ -141,7 +53,7 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Top</a></li>
+                <li><a href="index.html">Top</a></li>
                 <li><a href="access.html">Access</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="ticket.html" class="btn-ticket">Ticket</a></li>
@@ -149,112 +61,48 @@
         </nav>
     </header>
 
-    <div class="slider-background">
-        <div class="slide slide1"></div>
-        <div class="slide slide2"></div>
-    </div>
+    <main class="main-content">
+        <h2>吉沢孝太郎 60年の歩み</h2>
+        <p class="subtitle">HISTORY OF KOTARO YOSHIZAWA</p>
 
-    <main class="hero-scroll-container">
-        <div class="retro-container">
-            <h1 class="retro-title-main">吉沢孝太郎 "祝還暦" イベント</h1>
-            
-            <div class="retro-title-sub">
-                <span class="small-prefix" style="font-size: 1.15rem !important;">元宝塚歌劇団花組男役</span>
-                <span class="retro-star-name">真丘奈央</span>
-                <span class="onstage-text">オンステージ</span>
-            </div>
+        <div class="history-container">
 
-            <p class="retro-date-clean">2026.8.15 (Sat)</p>
+            <!-- セクション1：幼少期〜学生時代 -->
+            <section class="timeline-section">
+                <h3 class="timeline-era">1966年〜：誕生・学生時代</h3>
+                <p>
+                    1966年8月19日（丙午年）、群馬県伊勢崎市生まれ。<br>
+                    1990年、早稲田大学社会科学部卒業。
+                </p>
+                <a href="profile.html" class="back-to-profile">&larr; プロフィールページに戻る</a>
+            </section>
 
-            <p class="retro-time-clean" style="font-family: 'Georgia', sans-serif; font-size: 1.4rem; color: #ffffff; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
-                Open 11:30am / Start 12:00pm
-            </p>
+            <!-- セクション2：社会人スタート〜欧州期 -->
+            <section class="timeline-section">
+                <h3 class="timeline-era">1990年〜：証券業界・欧州でのキャリア</h3>
+                <p>
+                    1990年に証券業界で社会人デビュー。その後キャリアの半分を欧州で過ごす。<br>
+                    2008年に英国永住権を取得。
+                </p>
+                <a href="profile.html" class="back-to-profile">&larr; プロフィールページに戻る</a>
+            </section>
 
-            <!-- ⏰ カウントダウンタイマー表示エリア -->
-            <div class="countdown-container">
-                <div class="countdown-label">開演まであと</div>
-                <div id="countdown" class="countdown-display">
-                    <div class="countdown-item"><span id="days" class="countdown-number">00</span><span class="countdown-unit">日</span></div>
-                    <div class="countdown-item"><span id="hours" class="countdown-number">00</span><span class="countdown-unit">時間</span></div>
-                    <div class="countdown-item"><span id="minutes" class="countdown-number">00</span><span class="countdown-unit">分</span></div>
-                    <div class="countdown-item"><span id="seconds" class="countdown-number">00</span><span class="countdown-unit">秒</span></div>
-                </div>
-            </div>
+            <!-- セクション3：独立〜現在 -->
+            <section class="timeline-section">
+                <h3 class="timeline-era">2014年〜現在：独立・クロスボーダービジネス支援</h3>
+                <p>
+                    2014年に英国拠点の個人事業主として独立し、欧州と日本間のクロスボーダービジネス支援に従事。<br>
+                    これまでに英国大手金融メディア『Financial Times』、日本経済新聞欧州社、英国および日本のスタートアップ企業に対する業務支援を手がける。
+                </p>
+                <a href="profile.html" class="back-to-profile">&larr; プロフィールページに戻る</a>
+            </section>
 
-            <div class="retro-venue-box">
-                <p class="venue-name">CLUB ROSSO</p>
-                <p class="venue-address">渋谷区松濤1-29-1 渋谷クロスロードビルB1F</p>
-                <p class="event-price" style="color: #ffb800 !important; font-size: 1.2rem !important;">料金：4,500円/人 <span style="font-size: 0.8em; font-weight: normal; margin-left: 4px;">(全席自由・ワンドリンク付)</span></p>
-            </div>
-
-            <a href="ticket.html" class="cta-button retro-btn">チケットを申し込む</a>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Event Organizer. All Rights Reserved.</p>
     </footer>
-
-    <!-- プログラム（パスワード処理 ＆ カウントダウン） -->
-    <script>
-        /* =========================================
-           1. パスワード処理プログラム
-           ========================================= */
-        // 🧪 テスト用パスワードを設定しています（本番移行時はここを本番用ワードに変えてください）
-        const CORRECT_PASSWORD = "rosso";
-
-        // ページ読み込み時に、すでに認証済みかチェックする
-        window.addEventListener('DOMContentLoaded', () => {
-            if (sessionStorage.getItem("siteUnlocked") === "true") {
-                document.getElementById("password-screen").style.display = "none";
-            }
-        });
-
-        // 入場ボタンが押された時の処理
-        function checkPassword() {
-            const inputPass = document.getElementById("site-password").value;
-            
-            if (inputPass === CORRECT_PASSWORD) {
-                sessionStorage.setItem("siteUnlocked", "true");
-                const screen = document.getElementById("password-screen");
-                screen.style.transition = "opacity 0.4s ease";
-                screen.style.opacity = "0";
-                setTimeout(() => {
-                    screen.style.display = "none";
-                }, 400);
-            } else {
-                document.getElementById("pass-error").style.display = "block";
-            }
-        }
-
-        /* =========================================
-           2. カウントダウンプログラム
-           ========================================= */
-        const targetDate = new Date("2026/08/15 12:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("countdown").innerHTML = "<div class='countdown-expired'>本日のイベントは終了いたしました。</div>";
-            }
-        }
-
-        const timerInterval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
 
 </body>
 </html>
