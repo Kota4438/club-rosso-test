@@ -194,17 +194,27 @@
             text-align: center;
         }
 
-        .video-container video {
-            max-width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        .video-wrapper {
+            max-width: 680px;
+            margin: 0 auto;
             background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            display: block;
+            outline: none;
         }
 
         .video-caption {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 0.95rem;
-            color: #555;
+            color: #444;
             font-weight: bold;
         }
 
@@ -430,11 +440,11 @@
 
                     <!-- 幼少期ギャラリー -->
                     <div class="era-bottom-gallery">
-                        <img src="原点２IMG_5983.JPEG" alt="原点2IMG_5983">
+                        <img src="原点２IMG_6043.JPEG" alt="原点2IMG_6043">
                         <img src="IMG_6003.JPEG" alt="IMG_6003">
                         <img src="原点IMG_6004.JPEG" alt="原点IMG_6004">
                         <img src="原点IMG_5974.JPEG" alt="原点IMG_5974">
-                        <img src="原点２IMG_6043.JPEG" alt="原点2IMG_6043">
+                        <img src="原点２IMG_5983.JPEG" alt="原点2IMG_5983">
                     </div>
                 </section>
 
@@ -490,7 +500,7 @@
                     <div class="era-3col-grid">
                         <!-- 左側写真 (1/3) -->
                         <div class="era-3col-left">
-                            <img src="1980年代IMG_5921.JPEG" alt="1980年代IMG_5921">
+                            <img src="IMG_6135.JPEG" alt="IMG_6135">
                             <img src="1980年代IMG_5922.JPEG" alt="1980年代IMG_5922">
                             <img src="1980年代IMG_5924.JPEG" alt="1980年代IMG_5924">
                         </div>
@@ -515,10 +525,12 @@
 
                     <!-- 文章下の動画表示 -->
                     <div class="video-container">
-                        <video controls preload="metadata">
-                            <source src="Video Project 15 (4).mp4" type="video/mp4">
-                            お使いのブラウザは動画の再生に対応していません。
-                        </video>
+                        <div class="video-wrapper">
+                            <video controls playsinline preload="metadata">
+                                <source src="Video Project 15 (4).mp4" type="video/mp4">
+                                お使いのブラウザは動画の再生に対応していません。
+                            </video>
+                        </div>
                         <div class="video-caption">”前橋高校応援団_NHK教育テレビ番組”YOU”取材出演”</div>
                     </div>
 
@@ -527,7 +539,7 @@
                         <img src="1980年代IMG_6165.JPEG" alt="1980年代IMG_6165">
                         <img src="1980年代IMG_5925.JPEG" alt="1980年代IMG_5925">
                         <img src="1980年代IMG_5931.JPEG" alt="1980年代IMG_5931">
-                        <img src="1980年代IMG_5923.JPEG" alt="1980年代IMG_5923">
+                        <img src="IMG_6136.JPEG" alt="IMG_6136">
                         <img src="1980年代481080053_10163103976215712_8358892427123722318_n.jpg" alt="1980年代481080053_10163103976215712_8358892427123722318_n">
                         <img src="IMG_6646.JPEG" alt="IMG_6646">
                         <img src="IMG_6644.JPEG" alt="IMG_6644">
@@ -543,7 +555,6 @@
                         <img src="IMG_6660.JPEG" alt="IMG_6660">
                         <img src="IMG_6661.JPEG" alt="IMG_6661">
                         <img src="IMG_6650.JPEG" alt="IMG_6650">
-                        <img src="1980年代IMG_6352.JPEG" alt="1980年代IMG_6352">
                         <img src="IMG_6649.JPEG" alt="IMG_6649">
                     </div>
                 </section>
