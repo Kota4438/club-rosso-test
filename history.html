@@ -46,7 +46,7 @@
         }
 
         /* --------------------------------------------------
-           年代別セクションのレイアウト（PC: 左2/3 + 右1/3）
+           年代別セクションのレイアウト
         -------------------------------------------------- */
         .era-section {
             margin-bottom: 50px;
@@ -63,7 +63,7 @@
             margin-bottom: 20px;
         }
 
-        /* 左2/3・右1/3 2カラム構造 */
+        /* 左2/3・右1/3 2カラム構造 (1960年代用) */
         .era-grid {
             display: flex;
             gap: 20px;
@@ -93,6 +93,40 @@
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             object-fit: cover;
+        }
+
+        /* --------------------------------------------------
+           左1/3写真・右2/3文章 2カラム構造 (1970年代用)
+        -------------------------------------------------- */
+        .era-grid-reverse {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        /* 左側：写真枠 (約1/3 = 32%) */
+        .era-left-photo-col {
+            flex: 0 0 32%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .era-left-photo-col img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            object-fit: cover;
+        }
+
+        /* 右側：文章 (約2/3 = 65%) */
+        .era-right-text-col {
+            flex: 0 0 65%;
+            font-size: 1rem;
+            line-height: 1.85;
+            color: #333;
+            text-align: justify;
         }
 
         /* 文章下のサブギャラリー（右展開・並列横スクロール） */
@@ -137,19 +171,20 @@
 
         /* 📱 スマホ対応（横幅768px以下） */
         @media (max-width: 768px) {
-            .era-grid {
+            .era-grid, .era-grid-reverse {
                 flex-direction: column;
             }
-            .era-text-col, .era-side-photo-col {
+            .era-text-col, .era-side-photo-col,
+            .era-left-photo-col, .era-right-text-col {
                 flex: 100%;
                 width: 100%;
             }
-            .era-side-photo-col {
+            .era-side-photo-col, .era-left-photo-col {
                 flex-direction: row;
                 overflow-x: auto;
                 padding-bottom: 10px;
             }
-            .era-side-photo-col img {
+            .era-side-photo-col img, .era-left-photo-col img {
                 width: 180px;
                 flex-shrink: 0;
             }
@@ -343,19 +378,29 @@
                 <!-- 【1970年代 ～スポーツ少年から青春時代へ～】 -->
                 <section class="era-section">
                     <h3 class="era-title">1970年代 ～スポーツ少年から青春時代へ～</h3>
-                    <div class="section-text">
-                        <p>伊勢崎市立南小学校時代は、とにかく体を動かすことが好きだった。</p>
-                        <p>野球、水泳、スキー、市内スキークラブ、サッカースポーツ少年団…。左ウイングとして副キャプテンも務めた。中学校では当初サッカー部へ入部するつもりだった。しかし、小学校時代の憧れの先輩たちが"ビーバップ"スタイルへ変貌し、スパイクのかかとを踏みつぶしてプレーする姿を見て断念。</p>
-                        <p>母の影響もあり軟式庭球部へ転向。中学3年の中体連では市内3位となり、県大会にも出場した。芸術面では、マンガに始まり絵を描くことが得意で、書道は教室に習いながら初段を取得した。</p>
+                    
+                    <div class="era-grid-reverse">
+                        <!-- 左側：写真枠 (約1/3スペース) -->
+                        <div class="era-left-photo-col">
+                            <img src="IMG_6112.JPEG" alt="IMG_6112">
+                            <img src="1980年代IMG_6138.JPEG" alt="1980年代IMG_6138">
+                            <img src="1970年代IMG_6163.JPEG" alt="1970年代IMG_6163">
+                        </div>
+
+                        <!-- 右側：文章 (約2/3スペース) -->
+                        <div class="era-right-text-col">
+                            <p>伊勢崎市立南小学校時代は、とにかく体を動かすことが好きだった。</p>
+                            <p>野球、水泳、スキー、市内スキークラブ、サッカースポーツ少年団…。左ウイングとして副キャプテンも務めた。中学校では当初サッカー部へ入部するつもりだった。しかし、小学校時代の憧れの先輩たちが"ビーバップ"スタイルへ変貌し、スパイクのかかとを踏みつぶしてプレーする姿を見て断念。</p>
+                            <p>母の影響もあり軟式庭球部へ転向。中学3年の中体連では市内3位となり、県大会にも出場した。芸術面では、マンガに始まり絵を描くことが得意で、書道は教室に習いながら初段を取得した。</p>
+                        </div>
                     </div>
 
-                    <!-- 1970年代ギャラリー -->
+                    <!-- 1970年代ギャラリー（残りの写真） -->
                     <div class="era-bottom-gallery">
                         <img src="原点IMG_6491.JPEG" alt="原点IMG_6491">
                         <img src="原点IMG_5992.JPEG" alt="原点IMG_5992">
                         <img src="IMG_6011.JPEG" alt="IMG_6011">
                         <img src="1970年代IMG_6050.JPEG" alt="1970年代IMG_6050">
-                        <img src="IMG_6112.JPEG" alt="IMG_6112">
                         <img src="IMG_6140.JPEG" alt="IMG_6140">
                         <img src="IMG_6146.JPEG" alt="IMG_6146">
                         <img src="IMG_6147.JPEG" alt="IMG_6147">
@@ -368,10 +413,8 @@
                         <img src="IMG_6131.JPEG" alt="IMG_6131">
                         <img src="IMG_6132.JPEG" alt="IMG_6132">
                         <img src="IMG_6113.JPEG" alt="IMG_6113">
-                        <img src="1980年代IMG_6138.JPEG" alt="1980年代IMG_6138">
                         <img src="1980年代IMG_6137.JPEG" alt="1980年代IMG_6137">
                         <img src="1970年代IMG_6164.JPEG" alt="1970年代IMG_6164">
-                        <img src="1970年代IMG_6163.JPEG" alt="1970年代IMG_6163">
                         <img src="IMG_6167.JPEG" alt="IMG_6167">
                         <img src="IMG_6154.JPEG" alt="IMG_6154">
                     </div>
