@@ -11,8 +11,8 @@
         /* ページ全体コンテナ */
         .history-container {
             max-width: 900px;
-            margin: 20px auto 50px auto;
-            padding: 30px 20px;
+            margin: 0 auto 50px auto; /* 上部マージンを0にして上に詰めました */
+            padding: 15px 20px 30px 20px; /* パディングの上部も詰めています */
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -22,7 +22,8 @@
             font-size: 2.2rem;
             color: #1a1a1a;
             text-align: center;
-            margin-bottom: 30px;
+            margin-top: 10px; /* タイトル上の不要な隙間を短縮 */
+            margin-bottom: 25px;
             font-weight: 700;
             letter-spacing: 2px;
         }
@@ -197,9 +198,18 @@
 
         .back-to-top-btn { text-align: center; margin-top: 40px; }
         .back-to-profile { color: #8b0000; font-weight: bold; text-decoration: underline; }
+
+        /* 🎫 ナビゲーションバー：Ticketボタンを他メニューと完全共通化 */
+        .btn-ticket {
+            background-color: transparent !important;
+            color: inherit !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            font-weight: normal !important;
+        }
     </style>
 </head>
-<body style="padding-top: 110px;">
+<body style="padding-top: 70px;"> <!-- ヘッダー高さに合わせて全体の詰め調整 -->
 
     <!-- ナビゲーションメニュー -->
     <header>
