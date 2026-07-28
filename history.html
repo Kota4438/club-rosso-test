@@ -63,7 +63,7 @@
             margin-bottom: 20px;
         }
 
-        /* 左2/3・右1/3 2カラム構造 (1960年代・1990年代用) */
+        /* 左2/3・右1/3 2カラム構造 (1960年代・1990年代前半用) */
         .era-grid {
             display: flex;
             gap: 20px;
@@ -96,7 +96,7 @@
         }
 
         /* --------------------------------------------------
-           左1/3写真・右2/3文章 2カラム構造 (1970年代用)
+           左1/3写真・右2/3文章 2カラム構造 (1970年代・1990年代後半用)
         -------------------------------------------------- */
         .era-grid-reverse {
             display: flex;
@@ -127,6 +127,15 @@
             line-height: 1.85;
             color: #333;
             text-align: justify;
+        }
+
+        /* 写真下のキャプション（説明文）スタイル */
+        .photo-caption {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 6px;
+            line-height: 1.4;
+            text-align: center;
         }
 
         /* --------------------------------------------------
@@ -563,6 +572,8 @@
                 <!-- 【1990年代 ～金融の世界へ、そしてヨーロッパへ～】 -->
                 <section class="era-section">
                     <h3 class="era-title">1990年代 ～金融の世界へ、そしてヨーロッパへ～</h3>
+                    
+                    <!-- 1. 入社〜バブル崩壊 (左2/3文章、右1/3写真) -->
                     <div class="era-grid">
                         <!-- 左側：文章 (約2/3) -->
                         <div class="era-text-col">
@@ -574,18 +585,46 @@
                         <!-- 右側：写真表示枠 (約1/3スペース) -->
                         <div class="era-side-photo-col">
                             <img src="IMG_6664.JPEG" alt="IMG_6664">
-                            <img src="IMG_6672.JPEG" alt="IMG_6672">
                         </div>
                     </div>
 
-                    <!-- 文章下：横並びスクロールギャラリー -->
+                    <!-- 文章下：横並びスクロールギャラリー（IMG_6672.JPEGをIMG_6671.JPEGの次に移動） -->
                     <div class="era-bottom-gallery">
                         <img src="IMG_6632.JPEG" alt="IMG_6632">
                         <img src="IMG_6671.JPEG" alt="IMG_6671">
+                        <img src="IMG_6672.JPEG" alt="IMG_6672">
                         <img src="IMG_6667.JPEG" alt="IMG_6667">
                         <img src="IMG_6666.JPEG" alt="IMG_6666">
                         <img src="IMG_6663.JPEG" alt="IMG_6663">
                         <img src="IMG_6668.JPEG" alt="IMG_6668">
+                    </div>
+
+                    <div style="margin-top: 40px;"></div>
+
+                    <!-- 2. 留学生選抜 (左右逆転レイアウト：左1/3写真、右2/3文章) -->
+                    <div class="era-grid-reverse">
+                        <!-- 左側：写真枠 (約1/3スペース) -->
+                        <div class="era-left-photo-col">
+                            <img src="IMG_6628.JPEG" alt="IMG_6628">
+                            <div class="photo-caption">平成７年入社新人研修のインストラクターチーム</div>
+                        </div>
+
+                        <!-- 右側：文章 (約2/3スペース) -->
+                        <div class="era-right-text-col">
+                            <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【留学生選抜】</h4>
+                            <p>1995年に大きな転機が訪れる。社内の留学生選抜(応募者1,000名に対して合格枠はわずか9名)を見事に突破した。</p>
+                            <p>とりあえず人事部人材開発部へ配属となり、新入社員の研修クラスを受け持つ新人教育も担当した後に、いきなり海外赴任が決まった。行き先はオランダ・アムステルダム。</p>
+                            <p>バブル崩壊後の証券界は不況の真っただ中。経費削減の波は容赦なく押し寄せ、留学生に選ばれた９名のうち、私を含む3名の支店の個人営業マンに甘い密月は許されなくなっていた。会社がくれたのは「仕事を離れて学べる夢のチケット」ではなく、「現地で叩き上げられる日本株営業」のポジション。かくして私の“海外留学”は、仕事をしながら通う現地の英会話スクール生へと見事にスライドしたのだった。</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章下：横並びスクロールギャラリー（研修担当クラス写真） -->
+                    <div style="margin-top: 20px;">
+                        <div class="era-bottom-gallery">
+                            <img src="IMG_6679.JPEG" alt="IMG_6679">
+                            <img src="IMG_6680.JPEG" alt="IMG_6680">
+                        </div>
+                        <div class="photo-caption" style="text-align: left; margin-top: 5px; font-weight: bold; color: #444;">平成７年入社新人研修担当クラス</div>
                     </div>
                 </section>
 
