@@ -87,7 +87,7 @@
             gap: 12px;
         }
 
-        .era-side-photo-col img {
+        .era-side-photo-col img, .era-side-photo-col video {
             width: 100%;
             height: auto;
             border-radius: 6px;
@@ -104,7 +104,7 @@
             align-items: flex-start;
         }
 
-        /* 左側：写真枠 (約1/3 = 32%) */
+        /* 左側：写真・動画枠 (約1/3 = 32%) */
         .era-left-photo-col {
             flex: 0 0 32%;
             display: flex;
@@ -112,7 +112,7 @@
             gap: 12px;
         }
 
-        .era-left-photo-col img {
+        .era-left-photo-col img, .era-left-photo-col video {
             width: 100%;
             height: auto;
             border-radius: 6px;
@@ -188,7 +188,7 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .era-bottom-gallery img {
+        .era-bottom-gallery img, .era-bottom-gallery video {
             height: 160px;
             width: auto;
             border-radius: 6px;
@@ -267,7 +267,8 @@
                 overflow-x: auto;
                 padding-bottom: 10px;
             }
-            .era-side-photo-col img, .era-left-photo-col img,
+            .era-side-photo-col img, .era-side-photo-col video,
+            .era-left-photo-col img, .era-left-photo-col video,
             .era-3col-left img, .era-3col-right img {
                 width: 180px;
                 flex-shrink: 0;
@@ -723,6 +724,83 @@
                             <img src="IMG_6344.JPEG" alt="IMG_6344">
                             <img src="IMG_6345.JPEG" alt="IMG_6345">
                             <img src="IMG_6349.JPG" alt="IMG_6349">
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;"></div>
+
+                    <!-- 6. ソニーへ入社 (左右逆転レイアウト：左1/3動画・写真、右2/3文章) -->
+                    <div class="era-grid-reverse">
+                        <!-- 左側：動画・写真枠 (約1/3スペース) -->
+                        <div class="era-left-photo-col">
+                            <video controls playsinline preload="metadata">
+                                <source src="Monex_FOCUS_slideshow_v2.mp4#t=0.001" type="video/mp4">
+                                <source src="Monex_FOCUS_slideshow_v2.mp4" type="video/mp4">
+                            </video>
+                            <img src="IMG_6389.JPEG" alt="IMG_6389">
+                        </div>
+
+                        <!-- 右側：文章 (約2/3スペース) -->
+                        <div class="era-right-text-col">
+                            <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【ソニーへ入社】</h4>
+                            <p>１９９８年春にソニーの財務部に新設された資本市場課へ入社。杉並区永福町に住まいを構えて、品川の本社へ通勤した。課はせいぜい４～５名の小所帯だったが、当時の上司は後のソニー会長・吉田健一郎氏、係長は現社長CEOの十時裕樹氏だった。</p>
+                            <p>翌1999年春には、出井伸之会長の肝煎りの極秘プロジェクト「マネックス」準備室に、志願兵として参画。この新会社立案者で、個人でソニーと共同出資した松本大氏（当時ゴールドマンサックス本社ゼネラルパートナーで現マネックスグループ会長）と彼の部下３名と、神田錦町竹橋安田ビルの一室で日本のインターネット証券黎明期に立ち会うこととなる。</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章下：横並びスクロールギャラリー（マネックス写真） -->
+                    <div style="margin-top: 20px;">
+                        <div class="era-bottom-gallery">
+                            <img src="Monex1.JPEG" alt="Monex1">
+                            <img src="Monex3.JPEG" alt="Monex3">
+                            <img src="Monex2.JPEG" alt="Monex2">
+                            <img src="Monex4.JPEG" alt="Monex4">
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- 【2000年代 ～再びロンドンへ～】 -->
+                <section class="era-section">
+                    <h3 class="era-title">2000年代 ～再びロンドンへ～</h3>
+                    
+                    <!-- 左2/3文章、右1/3写真 -->
+                    <div class="era-grid">
+                        <!-- 左側：文章 (約2/3) -->
+                        <div class="era-text-col">
+                            <p>旗揚げしたマネックスでは、事業開発部と顧客サービス部を牽引した。創業者・松本大氏の知名度とITブームの爆発的な追い風を背に急成長を続け、営業開始からたった1年後の2000年8月には東証マザーズ上場を成し遂げる。</p>
+                            <p>振り返れば、企業の「廃業・上場廃止」と「起業・新規上場」。ビジネスの陰と陽、その表裏一体と言える両輪のドラマを、身をもって経験することとなった。</p>
+                            <p>2003年にドイツ証券東京支店へ転職。その年の７月に再びロンドン勤務となった。フランクフルトに本社を置く伝統ある商業銀行でありながら、英モルガン・グレンフェル買収を機に、ロンドンを拠点として世界資本市場で果敢にリスクを取る投資銀行部門が母体を支える軸となっていた。ここのグローバルマーケッツ部門で日本株営業部に身を置いた。</p>
+                            <p>ここでは山一ロンドン時代に培ったノウハウが大いに役立った。日系証券の強みである「全方位外交」と「手厚い事業会社ケア」。そこに、必要な領域へ過剰なまでにフォーカスし、それ以外は潔く切り捨てる「外資系スタイル」を融合したハイブリッド型サービスを展開。日本を代表する上場企業の経営陣に帯同し、欧州や北米の有力機関投資家を巡るIRロードショー（コーポレートアクセス）を精力的にこなした。ロンドンオフィスの現場において、日本人社員一人という時期も長く続いたが、世界の金融市場の中心舞台で役割を担った。</p>
+                        </div>
+
+                        <!-- 右側：写真表示枠 (約1/3スペース) -->
+                        <div class="era-side-photo-col">
+                            <img src="copy_1BA0717A-4F7F-4E6F-953E-3A376F7D55B2.jpeg" alt="copy_1BA0717A-4F7F-4E6F-953E-3A376F7D55B2">
+                            <img src="IMG_6701.JPEG" alt="IMG_6701">
+                            <img src="IMG_6699.JPEG" alt="IMG_6699">
+                        </div>
+                    </div>
+
+                    <!-- 文章下の動画・写真と脚注 -->
+                    <div style="margin-top: 20px;">
+                        <div class="era-bottom-gallery">
+                            <video controls playsinline preload="metadata">
+                                <source src="MMC_slideshow_vertical_v2.mp4#t=0.001" type="video/mp4">
+                                <source src="MMC_slideshow_vertical_v2.mp4" type="video/mp4">
+                            </video>
+                            <img src="MMC2.JPEG" alt="MMC2">
+                            <img src="MMC1.JPEG" alt="MMC1">
+                        </div>
+                        <div class="photo-caption" style="text-align: center; margin-top: 8px;">三菱マテリアル社内報（2006年8月号）</div>
+                    </div>
+
+                    <!-- さらに下の並列写真表示 -->
+                    <div style="margin-top: 15px;">
+                        <div class="era-bottom-gallery">
+                            <img src="IMG_6697.JPEG" alt="IMG_6697">
+                            <img src="IMG_6696.JPEG" alt="IMG_6696">
+                            <img src="IMG_6694.JPEG" alt="IMG_6694">
                         </div>
                     </div>
 
