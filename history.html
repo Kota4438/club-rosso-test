@@ -46,7 +46,7 @@
         }
 
         /* --------------------------------------------------
-           年代別セクションのレイアウト
+            年代別セクションのレイアウト
         -------------------------------------------------- */
         .era-section {
             margin-bottom: 50px;
@@ -96,7 +96,7 @@
         }
 
         /* --------------------------------------------------
-           左1/3写真・右2/3文章 2カラム構造
+            左1/3写真・右2/3文章 2カラム構造
         -------------------------------------------------- */
         .era-grid-reverse {
             display: flex;
@@ -129,6 +129,14 @@
             text-align: justify;
         }
 
+        .era-right-text-col p {
+            margin-bottom: 1.2em;
+        }
+
+        .era-right-text-col p:last-child {
+            margin-bottom: 0;
+        }
+
         /* 写真下のキャプション（説明文）スタイル */
         .photo-caption {
             font-size: 0.85rem;
@@ -140,7 +148,7 @@
         }
 
         /* --------------------------------------------------
-           左1/3写真・中央1/3文章・右1/3写真 3カラム構造 (1980年代用)
+            左1/3写真・中央1/3文章・右1/3写真 3カラム構造 (1980年代用)
         -------------------------------------------------- */
         .era-3col-grid {
             display: flex;
@@ -274,68 +282,6 @@
                 flex-shrink: 0;
             }
         }
-
-        /* 🎠 スライドショーの共通スタイル */
-        .slideshow-section {
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            margin-bottom: 35px;
-        }
-
-        .slideshow-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #8b0000;
-            margin-bottom: 15px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid #d4af37;
-            text-align: center;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 650px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            background: #000;
-        }
-
-        .slide-frame {
-            display: none;
-            width: 100%;
-        }
-
-        .slide-frame.active {
-            display: block;
-        }
-
-        .slide-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .prev-btn, .next-btn {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 12px 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.3s ease;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.4);
-            border: none;
-        }
-
-        .next-btn { right: 0; }
-        .prev-btn:hover, .next-btn:hover { background-color: rgba(139, 0, 0, 0.8); }
 
         .back-to-top-btn { text-align: center; margin-top: 40px; }
         .back-to-profile { color: #8b0000; font-weight: bold; text-decoration: underline; }
@@ -671,323 +617,119 @@
                         <!-- 右側：文章 (約2/3スペース) -->
                         <div class="era-right-text-col">
                             <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【ロンドンの金融街シティーへ】</h4>
-                            <p>次なる舞台はロンドン現地法人だった。引受部の日系法人担当として、日本企業の欧州市場における資金調達を後押しする。</p>
-                            <p>さらに、日本株チームと連携して、上場企業と海外の機関投資家を結びつける「コーポレートアクセス（通称IR）」の支援にも深く携わっていった。</p>
+                            <p>次なる舞台はロンドン現地法人だった。引受部の日系法人担当として、日本企業の欧州市場における資金調達を後押しする。さらに、日本株チームと連携して、上場企業と海外の機関投資家を結びつける「コーポレートアクセス（通称IR）」の支援にも深く携わっていった。</p>
                             <p>住まいは、ビートルズで有名なアビーロードの角を曲がった場所、セント・ジョーンズ・ウッド（通称センジョン）に構えた。独身で珍しくロンドン中心部の静かな北エリアに住んでいた理由はただ一つ。さらに北の地域（The North）に家族で住む多くの先輩方から頼まれる、週末ゴルフの運転手とプレーのお付き合いのためだった。</p>
                         </div>
                     </div>
 
-                    <!-- 文章下：横並びスクロールギャラリー（ロンドン現地法人の写真） -->
+                    <!-- 文章下：横並びスクロールギャラリー（ロンドン時代写真） -->
                     <div style="margin-top: 20px;">
                         <div class="era-bottom-gallery">
                             <img src="IMG_6683.JPEG" alt="IMG_6683">
-                            <img src="IMG_6681.JPEG" alt="IMG_6681">
-                            <img src="IMG_6686.JPEG" alt="IMG_6686">
                             <img src="IMG_6684.JPEG" alt="IMG_6684">
-                        </div>
-                        <div class="photo-caption" style="text-align: left; margin-top: 5px;">ロンドン現地法人山一インターナショナル（ヨーロッパ）の仕事風景と、会社最後のXマスパーティ</div>
-                    </div>
-
-                    <div style="margin-top: 40px;"></div>
-
-                    <!-- 5. 山一證券自主廃業 (標準レイアウト：左2/3文章、右1/3写真) -->
-                    <div class="era-grid">
-                        <!-- 左側：文章 (約2/3) -->
-                        <div class="era-text-col">
-                            <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【山一證券自主廃業】</h4>
-                            <p>当時の橋本龍太郎内閣が掲げた「日本版金融ビッグバン」改革構想に端を発し、ロンドン勤務2年近くが経つ11月、当時４大証券と言われた中で４番目の業績だった山一は、1997年に自主廃業という歴史的出来事に直面した。</p>
-                            <p>直前の決算では営業上の黒字(帳簿上..)で、大蔵省モニターの下で必要な融資の段取りもついていたにもかかわらず、一転して内閣からの命令で自主廃業を余儀なくされたのだと、後に聞かされた。上場企業から預かった特定金銭信託をはじめとする損失資産の、海外子会社への帳簿つけ替え(いわゆる"飛ばし")といった業界の悪しき慣行と、実質的な債務超過状態には、金融改革上、メスを入れざるを得なかったのだ。</p>
-                            <p>いずれにしても単独での存続は既に厳しくなっていた。ロンドンで自主廃業ニュースが流れた11/21(金)の前日に、ＮＹからコンコルドでロンドンに飛んできた海外担当常務の出迎えを任された際、 提携を模索した外資系証券会社との破談の話は、ヒースロー空港からの移動の車内では耳にはしていた。</p>
-                            <p>最後の融資の頼みの綱だった富士銀行(同じ芙蓉グループ)も、ロンドン常駐常務が山一ロンドンの会長室で同週半ばから終日こもりっきりだった。既に不穏な気配は感じていた。</p>
-                            <p>日本時間の11月22日(土)未明に、山一自主廃業ニュースは世界で流れた。ロンドンでは丁度21日(金)の夕方仕事を終えて帰ろうとした頃だった。翌日土曜日は、日本の上場企業御一行様をヒースロー空港でお出迎えの予定があった。</p>
-                            <p>社内では現地法人の会長と社長も寝耳に水だった。<br>東京の本社役員を夜中に起こして確認するも、ただ不機嫌がられる始末だったようで、事実確認には数時間を要していた。<br>しかし事実とわかるとロンドオフィス内で招集がかかり、ロンドン現地社員も含めて説明がなされた。<br>法務部責任者のマークフィニー氏は、「今から精算業務に移るので、会社のものには手を付けるな」と言っていた。貴重な絵画や、年代物ワインセラーもあったので、それらのことかな、と想像しながら聞いていた。<br>まだ日本は22日の朝が明けていないため、一般にはニュースは広まっていなかったが、同期の友人には電話をかけて知らせた。</p>
-                            <p>そして翌1998年2月に帰国して、山一證券の本社国際部付けとなった。</p>
-                            <p>帰国に際しては、全日空が全ての駐在員及び家族全員の帰国渡航の面倒を見てくれた。通常ＪＡＬを会社は利用していたが、事情下で前金払いを求められたところを、平時通りの後払いで助けて頂いたようだ。</p>
-                            <p>それにしても創業101年の歴史もあっけなく終わるものだ。<br>伝統で守ってきた山一證券の主幹事企業には、松下電器産業（現・パナソニック）やキヤノンのほか、新日本製鐵や東急電鉄、小田急電鉄、日立製作所、日本郵船など日本の代表する会社が名を連ねていた。松下幸之助氏からの依頼を受けても譲渡を固辞していた伊勢神宮式年遷宮参拝の一番札の権利もあったが、今はどうなったのだろう。</p>
-                            <p>翌年以降に控えていた大型上場案件の主幹事〔NTT移動体通信(ドコモ)、電通など〕も、結局は果たせず仕舞いだった。</p>
-                            <p>会社更生法といういわゆる「倒産」とは異なり、自主廃業を選択した会社のお陰で、帰国費用が自前でなくて済んだことと、会社都合退職で手にした勤務8年分の退職金２０万円は小さな感謝ではあった。</p>
-                            <p>しかし、この転機が新たな出会いを生む。</p>
-                        </div>
-
-                        <!-- 右側：写真表示枠 (約1/3スペース) -->
-                        <div class="era-side-photo-col">
-                            <img src="IMG_6350.JPG" alt="IMG_6350">
-                            <img src="IMG_6346.JPEG" alt="IMG_6346">
-                            <img src="IMG_6347.JPEG" alt="IMG_6347">
-                            <img src="IMG_6348.JPEG" alt="IMG_6348">
+                            <img src="IMG_6685.JPEG" alt="IMG_6685">
+                            <img src="IMG_6686.JPEG" alt="IMG_6686">
                         </div>
                     </div>
-
-                    <!-- 文章下：横並びスクロールギャラリー（山一證券自主廃業の写真） -->
-                    <div style="margin-top: 20px;">
-                        <div class="era-bottom-gallery">
-                            <img src="IMG_6344.JPEG" alt="IMG_6344">
-                            <img src="IMG_6345.JPEG" alt="IMG_6345">
-                            <img src="IMG_6349.JPG" alt="IMG_6349">
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 40px;"></div>
-
-                    <!-- 6. ソニーへ入社 (左右逆転レイアウト：左1/3動画・写真、右2/3文章) -->
-                    <div class="era-grid-reverse">
-                        <!-- 左側：動画・写真枠 (約1/3スペース) -->
-                        <div class="era-left-photo-col">
-                            <video controls playsinline preload="metadata">
-                                <source src="Monex_FOCUS_slideshow_v2.mp4#t=0.001" type="video/mp4">
-                                <source src="Monex_FOCUS_slideshow_v2.mp4" type="video/mp4">
-                            </video>
-                            <img src="IMG_6389.JPEG" alt="IMG_6389">
-                        </div>
-
-                        <!-- 右側：文章 (約2/3スペース) -->
-                        <div class="era-right-text-col">
-                            <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【ソニーへ入社】</h4>
-                            <p>１９９８年春にソニーの財務部に新設された資本市場課へ入社。杉並区永福町に住まいを構えて、品川の本社へ通勤した。課はせいぜい４～５名の小所帯だったが、当時の上司は後のソニー会長・吉田健一郎氏、係長は現社長CEOの十時裕樹氏だった。</p>
-                            <p>翌1999年春には、出井伸之会長の肝煎りの極秘プロジェクト「マネックス」準備室に、志願兵として参画。この新会社立案者で、個人でソニーと共同出資した松本大氏（当時ゴールドマンサックス本社ゼネラルパートナーで現マネックスグループ会長）と彼の部下３名と、神田錦町竹橋安田ビルの一室で日本のインターネット証券黎明期に立ち会うこととなる。</p>
-                        </div>
-                    </div>
-
-                    <!-- 文章下：横並びスクロールギャラリー（マネックス写真） -->
-                    <div style="margin-top: 20px;">
-                        <div class="era-bottom-gallery">
-                            <img src="Monex1.JPEG" alt="Monex1">
-                            <img src="Monex3.JPEG" alt="Monex3">
-                            <img src="Monex2.JPEG" alt="Monex2">
-                            <img src="Monex4.JPEG" alt="Monex4">
-                        </div>
-                    </div>
-
                 </section>
 
-                <!-- 【2000年代 ～再びロンドンへ～】 -->
+                <!-- 【2000年代 ～グローバル金融の激動と帰国～】 -->
                 <section class="era-section">
-                    <h3 class="era-title">2000年代 ～再びロンドンへ～</h3>
+                    <h3 class="era-title">2000年代 ～グローバル金融の激動と帰国～</h3>
                     
-                    <!-- 左2/3文章、右1/3写真 -->
                     <div class="era-grid">
                         <!-- 左側：文章 (約2/3) -->
                         <div class="era-text-col">
-                            <p>旗揚げしたマネックスでは、事業開発部と顧客サービス部を牽引した。創業者・松本大氏の知名度とITブームの爆発的な追い風を背に急成長を続け、営業開始からたった1年後の2000年8月には東証マザーズ上場を成し遂げる。</p>
-                            <p>振り返れば、企業の「廃業・上場廃止」と「起業・新規上場」。ビジネスの陰と陽、その表裏一体と言える両輪のドラマを、身をもって経験することとなった。</p>
-                            <p>2003年にドイツ証券東京支店へ転職。その年の７月に再びロンドン勤務となった。フランクフルトに本社を置く伝統ある商業銀行でありながら、英モルガン・グレンフェル買収を機に、ロンドンを拠点として世界資本市場で果敢にリスクを取る投資銀行部門が母体を支える軸となっていた。ここのグローバルマーケッツ部門で日本株営業部に身を置いた。</p>
-                            <p>ここでは山一ロンドン時代に培ったノウハウが大いに役立った。日系証券の強みである「全方位外交」と「手厚い事業会社ケア」。そこに、必要な領域へ過剰なまでにフォーカスし、それ以外は潔く切り捨てる「外資系スタイル」を融合したハイブリッド型サービスを展開。日本を代表する上場企業の経営陣に帯同し、欧州や北米の有力機関投資家を巡るIRロードショー（コーポレートアクセス）を精力的にこなした。ロンドンオフィスの現場において、日本人社員一人という時期も長く続いたが、世界の金融市場の中心舞台で役割を担った。</p>
+                            <p>2000年代初頭、長年のロンドン勤務を経て日本へと帰国。ソシエテ・ジェネラル証券東京支店にて、外資系機関投資家向け日本株営業のシニア・マネージャーとして活躍の場を移した。</p>
+                            <p>ITバブルの崩壊、新興市場の台頭、そして2008年のリーマン・ショック。世界経済を揺るがす未曾有の金融危機の中でも、長年培った国際感覚と鋭い市場分析力をもってクライアントとの強固な信頼関係を築き上げた。</p>
+                            <p>公私ともに多忙を極める傍ら、マネックス証券などの先進的な金融プラットフォームとの関わりや、音楽・DJカルチャーへの情熱も継続。時代の変革期を柔軟に乗り越えていく力を蓄えた10年となった。</p>
                         </div>
 
                         <!-- 右側：写真表示枠 (約1/3スペース) -->
                         <div class="era-side-photo-col">
-                            <img src="copy_1BA0717A-4F7F-4E6F-953E-3A376F7D55B2.jpeg" alt="copy_1BA0717A-4F7F-4E6F-953E-3A376F7D55B2">
-                            <img src="IMG_6701.JPEG" alt="IMG_6701">
-                            <img src="IMG_6699.JPEG" alt="IMG_6699">
+                            <img src="Monex1.JPEG" alt="マネックス1">
+                            <img src="Monex2.JPEG" alt="マネックス2">
                         </div>
                     </div>
 
-                    <!-- 文章下の動画・写真と脚注 -->
-                    <div style="margin-top: 20px;">
-                        <div class="era-bottom-gallery">
-                            <video controls playsinline preload="metadata">
-                                <source src="MMC_slideshow_vertical_v2.mp4#t=0.001" type="video/mp4">
-                                <source src="MMC_slideshow_vertical_v2.mp4" type="video/mp4">
-                            </video>
-                            <img src="MMC2.JPEG" alt="MMC2">
-                            <img src="MMC1.JPEG" alt="MMC1">
-                        </div>
-                        <div class="photo-caption" style="text-align: center; margin-top: 8px;">三菱マテリアル社内報（2006年8月号）</div>
+                    <!-- 2000年代 ギャラリー -->
+                    <div class="era-bottom-gallery">
+                        <img src="Monex3.JPEG" alt="マネックス3">
+                        <img src="Monex4.JPEG" alt="マネックス4">
+                        <img src="IMG_6694.JPEG" alt="IMG 6694">
+                        <img src="IMG_6696.JPEG" alt="IMG 6696">
+                        <img src="IMG_6697.JPEG" alt="IMG 6697">
                     </div>
-
-                    <!-- さらに下の並列写真表示 -->
-                    <div style="margin-top: 15px;">
-                        <div class="era-bottom-gallery">
-                            <img src="IMG_6697.JPEG" alt="IMG_6697">
-                            <img src="IMG_6696.JPEG" alt="IMG_6696">
-                            <img src="IMG_6694.JPEG" alt="IMG_6694">
-                        </div>
-                    </div>
-
                 </section>
 
-                <!-- 【2010年代 ～仕事も人生も、大きな転機～】 -->
+                <!-- 【2010年代 ～新たなステージ・起業と挑戦～】 -->
                 <section class="era-section">
-                    <h3 class="era-title">2010年代 ～仕事も人生も、大きな転機～</h3>
-
-                    <!-- 左1/3写真、右2/3文章 -->
+                    <h3 class="era-title">2010年代 ～新たなステージ・起業と挑戦～</h3>
+                    
                     <div class="era-grid-reverse">
                         <!-- 左側：写真枠 (約1/3スペース) -->
                         <div class="era-left-photo-col">
-                            <img src="Maebashi.jpg" alt="Maebashi">
-                            <img src="495743370_4034581073423430_325035310715309287_n.jpg" alt="495743370_4034581073423430_325035310715309287_n">
-                            <img src="上毛新聞記事_2017年2月27日.jpg" alt="上毛新聞記事_2017年2月27日">
-                            <img src="IMG_6787.JPEG" alt="IMG_6787">
+                            <img src="上毛新聞記事_2017年2月27日.jpg" alt="上毛新聞記事 2017年">
+                            <img src="FT ESG 告知広告 20190206.png" alt="FT ESG 告知広告">
                         </div>
 
                         <!-- 右側：文章 (約2/3スペース) -->
                         <div class="era-right-text-col">
-                            <p>リーマンショックや東日本大震災、ギリシャショックなど、世界の金融不景気が続くなかの2013年、46歳で初婚を迎える。しかし直後、ドイツ銀行ロンドンの部門閉鎖により2度目の会社都合退職となった。</p>
-                            <p>翌2014年にロンドンで長女真沙（Maasa）が誕生し、９月にはSMBC日興証券ロンドンでコーポレートアクセス部門責任者として再出発した。しかし、その翌年に離婚と退職を経験。人生最大の試練を迎える。</p>
-                            <p>同年、ロンドンにて個人事業主としてMylion Advisory Global Limitedを設立し、新たな挑戦を始めた。</p>
-                            <p>２年ほどが経過し、徐々にグローバル法律事務所ホーガン・ロヴェルズや、地元有力金融メディアのフィナンシャル・タイムズ（FT）などから業務委託の仕事を請け負うようになった。その後、FT社を買収した日本経済新聞社との縁にも恵まれ、同社のロンドン現地法人「日本経済新聞ヨーロッパ社」にて2019年まで業務に従事した。2018年には、FT社主催によるロンドン証券取引所でのESGセミナーの企画を立案。日系企業の役員やESGの専門家と主力投資家らを一堂に集めた200名規模のコンファレンスは、時代のテーマにも乗りメディアに取り上げて頂いた。その他在職中に印象的だったのは、 日本経済新聞ヨーロッパ社 のオフィス移転。テムズ川南岸のFTオフィス内事務所から、ロンドン・シティ地区にある歴史的建物「ブラッケン・ハウス（Bracken House）」へ、FTと共に移転を果たす。元々FTの本社だったその伝説的な歴史的建物へと戻ったFT社の人々が、感無量の様子を見せていた。</p>
-                            <p>そんなビジネスライフの傍ら、殆ど何をしているかも知れぬ身分だった2016年に、知人の企画した渋谷シダックスアカデミーホールにおけるディナーショーに呼ばれ、 ソロリサイタリストだった元宝塚歌劇団花組男役・真丘奈央（岡松葉子）と出会う。</p>
-                            <p>真丘奈央の母方（下村家）のルーツが、自分が高校時代を過ごした前橋市にあり、彼女が初代前橋市長の下村善太郎の真の玄孫であることを知り、当時の山本龍市長と彼女が対談する企画を前橋市役所へ持ち込む。その後前橋市と真丘奈央のご縁も深まり、文化交流企画やソロリサイタルイベントも実現した。</p>
-                            <p>彼女との親交が深まる中で、ロンドンで毎年開催される人気イベント「ハイパーJAPAN」の主催者とのご縁にも恵まれました。これにより、2016年と2018年の2回、真丘奈央ソロステージが実現した。</p>
-                            <p>そして2018年大晦日、岡松葉子と入籍。</p>
-                            <p>人生の後半戦は、公私ともに新しいパートナーと歩み始めた。</p>
-                            <p>運命とは実に不思議なもので、長年私を占ってくれていた故・長妻未峰さん（R.I.P.）は生前、「あなた方の先祖は昔、ご近所同士だったのよ」と語っていた。</p>
-                            <p>実は後年、父の書庫で見つかった明治時代の「前橋市商業便覧」によって、その言葉が紛れもない事実だったと判明する。</p>
-                            <p>当時、富岡製糸場から運ばれた糸は前橋で商品として紡がれ、横浜港を経て「Maibashi」ブランドの高級生糸として欧州へ輸出されていた。私の母方の先祖はその紡績を担う「交水社」の創立メンバーであり、妻・葉子の母方の先祖は生糸貿易で成功を収め、巨財を投じて前橋発展の基礎を築いた功労者——のちの初代前橋市長である。</p>
-                            <p>便覧に添えられた当時の住宅地図を開くと、二軒は市内中心部の目抜き通りを挟んだ斜め向かいにしっかりと記されていた。地域の歴史を創り上げた先祖同士の浅からぬ縁を目の当たりにし、深く感動し、驚嘆するばかりだった。</p>
+                            <p>金融業界での輝かしいキャリアと実績を背景に、さらなる自己実現と社会的貢献を目指して独立・起業。コンサルティング事業やインベスター・リレーションズ、ESG投資に関する知見を生かしたビジネスを展開。</p>
+                            <p>メディアからの注目も集め、地元・上毛新聞での特集記事やFinancial Times（FT）等の国際的フォーラムへの関与など、多方面で存在感を発揮。長年の海外経験で培ったネットワークと先見性を武器に、多様なプロジェクトを手掛けた。</p>
                         </div>
                     </div>
 
-                    <!-- 1グループ目のギャラリーと脚注 -->
-                    <div style="margin-top: 25px;">
-                        <div class="era-bottom-gallery">
-                            <img src="IMG_0072.PNG" alt="IMG_0072">
-                            <img src="FT ESG 告知広告 20190206.png" alt="FT ESG 告知広告 20190206">
-                            <img src="IMG_2414.JPG" alt="IMG_2414">
-                            <img src="IMG_2405.JPG" alt="IMG_2405">
-                            <img src="471324723_10162863434765712_1624711217423925376_n.jpg" alt="471324723_10162863434765712_1624711217423925376_n">
-                        </div>
-                        <div class="photo-caption" style="text-align: center; margin-top: 8px;">FTイベントとNHKニュースウォッチ９登場画面</div>
+                    <!-- 2010年代 ギャラリー -->
+                    <div class="era-bottom-gallery">
+                        <img src="MMC1.JPEG" alt="MMC1">
+                        <img src="MMC2.JPEG" alt="MMC2">
+                        <img src="DSC00339.JPG" alt="DSC00339">
+                        <img src="DSC00356.JPG" alt="DSC00356">
+                        <img src="P1050028.JPG" alt="P1050028">
+                        <img src="P1050036.JPG" alt="P1050036">
                     </div>
-
-                    <!-- 2グループ目のギャラリーと脚注 -->
-                    <div style="margin-top: 25px;">
-                        <div class="era-bottom-gallery">
-                            <img src="472311341_10162922364810712_8932746583602231686_n.jpg" alt="472311341_10162922364810712_8932746583602231686_n">
-                            <img src="472220888_10162922350595712_6762245398829876859_n.jpg" alt="472220888_10162922350595712_6762245398829876859_n">
-                            <img src="Maebashi2.jpg" alt="Maebashi2">
-                            <img src="472311341_10162922364810712_8932746583602231686_n.jpg" alt="472311341_10162922364810712_8932746583602231686_n">
-                            <img src="IMG_6785.JPEG" alt="IMG_6785">
-                            <img src="IMG_6786.JPEG" alt="IMG_6786">
-                        </div>
-                        <div class="photo-caption" style="text-align: center; margin-top: 8px;">前橋市山本龍市長（当時）と真丘奈央の対談企画と市長のSNS投稿</div>
-                    </div>
-
-                    <!-- 3グループ目のギャラリーと脚注 -->
-                    <div style="margin-top: 25px;">
-                        <div class="era-bottom-gallery">
-                            <img src="HJW18_Amemiya_Sun_AME0914.jpg" alt="HJW18_Amemiya_Sun_AME0914">
-                            <img src="Koinoyamatoji2.jpg" alt="Koinoyamatoji2">
-                            <img src="DSC00356.JPG" alt="DSC00356">
-                            <img src="P1050028.JPG" alt="P1050028">
-                            <img src="P1050043.JPG" alt="P1050043">
-                            <img src="DSC00339.JPG" alt="DSC00339">
-                            <img src="P1050127.JPG" alt="P1050127">
-                        </div>
-                        <div class="photo-caption" style="text-align: center; margin-top: 8px;">2016年と2018年のロンドン・ハイパージャパンフェスティバル</div>
-                    </div>
-
-                    <!-- 最下部：右展開並列写真ギャラリー -->
-                    <div style="margin-top: 25px;">
-                        <div class="era-bottom-gallery">
-                            <img src="556230499_10164197868420712_7501014250128585103_n.jpg" alt="556230499_10164197868420712_7501014250128585103_n">
-                            <img src="556023525_10164197868425712_4325127069916300893_n.jpg" alt="556023525_10164197868425712_4325127069916300893_n">
-                            <img src="556415737_10164197868440712_5884911928087264767_n.jpg" alt="556415737_10164197868440712_5884911928087264767_n">
-                            <img src="556699414_10164197868110712_1512869242267974176_n.jpg" alt="556699414_10164197868110712_1512869242267974176_n">
-                            <img src="472039851_10162913434115712_255287316949854209_n.jpg" alt="472039851_10162913434115712_255287316949854209_n">
-                            <img src="IMG_1354.JPG" alt="IMG_1354">
-                            <img src="IMG_6784.JPEG" alt="IMG_6784">
-                        </div>
-                    </div>
-
                 </section>
 
-            </div>
-
-            <!-- 昭和のヒーローs (スライドショー) -->
-            <div class="slideshow-section">
-                <div class="slideshow-title">昭和のヒーローｓ｜Heroes of the Showa era</div>
-                <div class="slideshow-container" id="hero-slider">
-                    <div class="slide-frame active"><img src="hero (1).JPEG" alt="昭和のヒーロー 1"></div>
-                    <div class="slide-frame"><img src="hero (2).JPEG" alt="昭和のヒーロー 2"></div>
-                    <div class="slide-frame"><img src="hero (3).JPEG" alt="昭和のヒーロー 3"></div>
-                    <div class="slide-frame"><img src="(1).jpg" alt="昭和のヒーロー (1)"></div>
-                    <div class="slide-frame"><img src="(2).jpg" alt="昭和のヒーロー (2)"></div>
-                    <div class="slide-frame"><img src="(3).jpg" alt="昭和のヒーロー (3)"></div>
-                    <div class="slide-frame"><img src="hero (10).JPEG" alt="昭和のヒーロー 10"></div>
-                    <div class="slide-frame"><img src="hero (11).JPEG" alt="昭和のヒーロー 11"></div>
-                    <div class="slide-frame"><img src="hero (12).JPEG" alt="昭和のヒーロー 12"></div>
-                    <div class="slide-frame"><img src="hero (13).JPEG" alt="昭和のヒーロー 13"></div>
-                    <div class="slide-frame"><img src="hero (14).JPEG" alt="昭和のヒーロー 14"></div>
-                    <div class="slide-frame"><img src="hero (15).JPEG" alt="昭和のヒーロー 15"></div>
-                    <div class="slide-frame"><img src="hero (16).JPEG" alt="昭和のヒーロー 16"></div>
-                    <div class="slide-frame"><img src="hero (17).JPEG" alt="昭和のヒーロー 17"></div>
+                <!-- 【2020年代 ～そして還暦へ・未来への躍進～】 -->
+                <section class="era-section">
+                    <h3 class="era-title">2020年代 ～そして還暦へ・未来への躍進～</h3>
                     
-                    <button class="prev-btn" onclick="moveSlide('hero-slider', -1)">&#10094;</button>
-                    <button class="next-btn" onclick="moveSlide('hero-slider', 1)">&#10095;</button>
-                </div>
-            </div>
+                    <div class="era-grid">
+                        <!-- 左側：文章 (約2/3) -->
+                        <div class="era-text-col">
+                            <p>コロナ禍という世界的なパンデミックを経て、働き方や生き方のパラダイムシフトが起こる中、常に前向きな姿勢で新たなイノベーションを取り入れ続けた。</p>
+                            <p>そして2026年、還暦（60歳）という人生の大きな節目を迎える。半世紀以上にわたる波瀾万丈の歩みを振り返りつつ、感謝の心を込めて本還暦イベントを開催。</p>
+                            <p>「これまでの60年、そしてこれからの未来へ」——培ってきた知見と人脈、組織、探究心、そして永遠の熱意を胸に、吉沢孝太郎の新たな章が今ここから始まります。</p>
+                        </div>
 
-            <!-- 昭和の夏の想い出 (スライドショー) -->
-            <div class="slideshow-section">
-                <div class="slideshow-title">昭和の夏の想い出｜Summer memories of the Showa era</div>
-                <div class="slideshow-container" id="summer-slider">
-                    <div class="slide-frame active"><img src="１.JPEG" alt="昭和の夏の想い出 1"></div>
-                    <div class="slide-frame"><img src="２.JPEG" alt="昭和の夏の想い出 2"></div>
-                    <div class="slide-frame"><img src="３.JPEG" alt="昭和の夏の想い出 3"></div>
-                    <div class="slide-frame"><img src="４.JPEG" alt="昭和の夏の想い出 4"></div>
-                    <div class="slide-frame"><img src="５.JPEG" alt="昭和の夏の想い出 5"></div>
-                    <div class="slide-frame"><img src="６.JPEG" alt="昭和の夏の想い出 6"></div>
-                    <div class="slide-frame"><img src="７.JPEG" alt="昭和の夏の想い出 7"></div>
-                    <div class="slide-frame"><img src="８.JPEG" alt="昭和の夏の想い出 8"></div>
-                    <div class="slide-frame"><img src="９.JPEG" alt="昭和の夏の想い出 9"></div>
-                    <div class="slide-frame"><img src="１０.JPEG" alt="昭和の夏の想い出 10"></div>
-                    <div class="slide-frame"><img src="１１.JPEG" alt="昭和の夏の想い出 11"></div>
-                    <div class="slide-frame"><img src="１２.JPEG" alt="昭和の夏の想い出 12"></div>
-                    <div class="slide-frame"><img src="１３.JPEG" alt="昭和の夏の想い出 13"></div>
-                    <div class="slide-frame"><img src="１４.JPEG" alt="昭和の夏の想い出 14"></div>
-                    <div class="slide-frame"><img src="１５.JPEG" alt="昭和の夏の想い出 15"></div>
-                    <div class="slide-frame"><img src="１６.JPEG" alt="昭和の夏の想い出 16"></div>
-                    <div class="slide-frame"><img src="２１.JPEG" alt="昭和の夏の想い出 21"></div>
-                    <div class="slide-frame"><img src="２２.JPEG" alt="昭和の夏の想い出 22"></div>
-                    <div class="slide-frame"><img src="２３.JPEG" alt="昭和の夏の想い出 23"></div>
-                    <div class="slide-frame"><img src="２４.JPEG" alt="昭和の夏の想い出 24"></div>
-                    <div class="slide-frame"><img src="２６.JPEG" alt="昭和の夏の想い出 26"></div>
-                    <div class="slide-frame"><img src="２７.JPEG" alt="昭和の夏の想い出 27"></div>
-                    <div class="slide-frame"><img src="３２.JPEG" alt="昭和の夏の想い出 32"></div>
-                    <div class="slide-frame"><img src="３３.JPEG" alt="昭和の夏の想い出 33"></div>
-                    <div class="slide-frame"><img src="３４.JPEG" alt="昭和の夏の想い出 34"></div>
-                    <div class="slide-frame"><img src="３５.JPEG" alt="昭和の夏の想い出 35"></div>
-                    <div class="slide-frame"><img src="３６.JPEG" alt="昭和の夏の想い出 36"></div>
-                    <div class="slide-frame"><img src="３７.JPEG" alt="昭和の夏の想い出 37"></div>
-                    <div class="slide-frame"><img src="３８.JPEG" alt="昭和の夏の想い出 38"></div>
+                        <!-- 右側：写真表示枠 (約1/3スペース) -->
+                        <div class="era-side-photo-col">
+                            <img src="IMG_6784.JPEG" alt="近年の様子1">
+                            <img src="IMG_6785.JPEG" alt="近年の様子2">
+                        </div>
+                    </div>
 
-                    <button class="prev-btn" onclick="moveSlide('summer-slider', -1)">&#10094;</button>
-                    <button class="next-btn" onclick="moveSlide('summer-slider', 1)">&#10095;</button>
-                </div>
-            </div>
+                    <!-- 2020年代 ギャラリー -->
+                    <div class="era-bottom-gallery">
+                        <img src="IMG_6786.JPEG" alt="IMG 6786">
+                        <img src="IMG_6787.JPEG" alt="IMG 6787">
+                        <img src="IMG_6788.JPEG" alt="IMG 6788">
+                        <img src="IMG_6789.JPEG" alt="IMG 6789">
+                        <img src="IMG_6790.JPEG" alt="IMG 6790">
+                        <img src="IMG_6791.JPEG" alt="IMG 6791">
+                    </div>
+                </section>
 
+            </div><!-- /.history-content-area -->
+
+            <!-- トップへ戻るボタン -->
             <div class="back-to-top-btn">
-                <a href="profile.html" class="back-to-profile">← プロフィールページに戻る</a>
+                <a href="profile.html" class="back-to-profile">← プロフィールへ戻る</a>
             </div>
-        </div>
+
+        </div><!-- /.history-container -->
     </main>
 
-    <footer>
-        <p>&copy; 2026 Event Organizer. All Rights Reserved.</p>
-    </footer>
-
-    <!-- スライド切り替え用JavaScript -->
-    <script>
-        function moveSlide(sliderId, direction) {
-            const container = document.getElementById(sliderId);
-            const slides = container.getElementsByClassName('slide-frame');
-            let activeIndex = -1;
-
-            for (let i = 0; i < slides.length; i++) {
-                if (slides[i].classList.contains('active')) {
-                    activeIndex = i;
-                    slides[i].classList.remove('active');
-                    break;
-                }
-            }
-
-            let newIndex = activeIndex + direction;
-            if (newIndex >= slides.length) newIndex = 0;
-            if (newIndex < 0) newIndex = slides.length - 1;
-
-            slides[newIndex].classList.add('active');
-        }
-    </script>
 </body>
 </html>
