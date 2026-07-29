@@ -1,44 +1,295 @@
-<!-- 【２０２６年現在 ～感謝を胸に、次の10年へ～】 -->
-<section class="era-section">
-    <h3 class="era-title">２０２６年現在 ～感謝を胸に、次の10年へ～</h3>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60年の歩み - 60th Anniversary History</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #c59b27;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+        }
 
-    <!-- 3カラム（左1/3写真、中央1/3文章、右1/3写真） -->
-    <div class="era-3col-grid">
-        <!-- 左側写真 (1/3) -->
-        <div class="era-3col-left">
-            <img src="IMG_5650.JPG" alt="IMG_5650">
-            <img src="IMG_6800.JPEG" alt="IMG_6800">
-        </div>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        <!-- 中央文章 (1/3) -->
-        <div class="era-3col-center">
-            <p>現在はロンドンで個人事務所を運営しながら、妻・葉子と共に91歳の父・孝夫と89歳の母・太恵の介護を支える日々を送っている。また、京都で暮らす娘・真沙との毎月一泊二日の時間も、欠かせない大切なひとときだ。</p>
-            <p>振り返れば、私の60年は整然とした一本の軌跡などではなく、幾多の経験と出会いに塗りつぶされた「点」の集積だった。</p>
-            <p>スポーツに夢中だった少年時代、音楽に魅せられた青春、金融の世界での挑戦、海外生活、起業、結婚、離婚、そして新たな家族との出会い——。</p>
-            <p>その一つひとつの点が今、意味を持って繋がり、現在の自分を形づくっている（Connecting the dots! by Steve Jobs）。</p>
-            <p>これからも、多くの方々とのご縁と感謝を胸に、新しい歩みを続けていきたい。</p>
-        </div>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-        <!-- 右側写真 (1/3) -->
-        <div class="era-3col-right">
-            <img src="IMG_6789.JPEG" alt="IMG_6789">
-            <img src="IMG_6791.JPEG" alt="IMG_6791">
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary-color), #2b6cb0);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--accent-color);
+            transform: translateX(-50%);
+        }
+
+        .decade-section {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .decade-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .decade-title {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            width: 45%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .event-card.left {
+            margin-right: auto;
+        }
+
+        .event-card.right {
+            margin-left: auto;
+        }
+
+        .event-card img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .event-year {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .event-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .event-desc {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .decade-header {
+                text-align: left;
+                padding-left: 45px;
+            }
+
+            .event-card {
+                width: calc(100% - 45px);
+                margin-left: 45px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>60年の歩み</h1>
+            <p>1960年代から現在に至るまでの歴史と軌跡</p>
+        </header>
+
+        <div class="timeline">
+            <!-- 1960年代 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">1960年代</span>
+                </div>
+                
+                <div class="event-card left">
+                    <div class="event-year">1964年</div>
+                    <div class="event-title">創立・第一歩</div>
+                    <img src="https://via.placeholder.com/400x250?text=1964年+創立" alt="1964年 創立">
+                    <div class="event-desc">地域の期待を背負い事業を開始。小さな一歩から私たちの60年の歴史が始まりました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">1968年</div>
+                    <div class="event-title">新本社の開設</div>
+                    <img src="https://via.placeholder.com/400x250?text=1968年+本社開設" alt="1968年 本社開設">
+                    <div class="event-desc">業容拡大に伴い新社屋を建設・移転。業務効率とサービス向上を実現しました。</div>
+                </div>
+            </div>
+
+            <!-- 1970年代 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">1970年代</span>
+                </div>
+
+                <div class="event-card left">
+                    <div class="event-year">1972年</div>
+                    <div class="event-title">新事業部門の立ち上げ</div>
+                    <img src="https://via.placeholder.com/400x250?text=1972年+新事業" alt="1972年 新事業">
+                    <div class="event-desc">時代のニーズに応えるため、新たなサービス事業を立ち上げ発展の基礎を築きました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">1977年</div>
+                    <div class="event-title">全国ネットワークの展開</div>
+                    <img src="https://via.placeholder.com/400x250?text=1977年+拠点拡大" alt="1977年 拠点拡大">
+                    <div class="event-desc">主要都市への拠点開設を進め、全国規模でのサポート体制を推進しました。</div>
+                </div>
+            </div>
+
+            <!-- 1980年代 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">1980年代</span>
+                </div>
+
+                <div class="event-card left">
+                    <div class="event-year">1983年</div>
+                    <div class="event-title">システム化・デジタル推進</div>
+                    <img src="https://via.placeholder.com/400x250?text=1983年+デジタル化" alt="1983年 デジタル化">
+                    <div class="event-desc">コンピュータシステムを早期導入し、社内業務のスピード化と正確性を高めました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">1989年</div>
+                    <div class="event-title">創立25周年と CI導入</div>
+                    <img src="https://via.placeholder.com/400x250?text=1989年+25周年" alt="1989年 25周年">
+                    <div class="event-desc">コーポレートアイデンティティ（CI）を刷新。新たな企業ブランドを確立しました。</div>
+                </div>
+            </div>
+
+            <!-- 1990年代 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">1990年代</span>
+                </div>
+
+                <div class="event-card left">
+                    <div class="event-year">1994年</div>
+                    <div class="event-title">国際事業の推進</div>
+                    <img src="https://via.placeholder.com/400x250?text=1994年+海外進出" alt="1994年 海外進出">
+                    <div class="event-desc">海外パートナーとの提携を開始し、グローバルなビジネス展開の第一歩を踏み出しました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">1998年</div>
+                    <div class="event-title">環境保全活動の強化</div>
+                    <img src="https://via.placeholder.com/400x250?text=1998年+環境保全" alt="1998年 環境保全">
+                    <div class="event-desc">環境対応型プロダクトの展開やエコ活動を推進し、企業の社会的責任を果たしました。</div>
+                </div>
+            </div>
+
+            <!-- 2000年代 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">2000年代</span>
+                </div>
+
+                <div class="event-card left">
+                    <div class="event-year">2003年</div>
+                    <div class="event-title">ISO認証の取得</div>
+                    <img src="https://via.placeholder.com/400x250?text=2003年+ISO取得" alt="2003年 ISO取得">
+                    <div class="event-desc">品質管理および環境管理の国際規格を取得し、信頼性の向上を図りました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">2008年</div>
+                    <div class="event-title">Webサービスの本格化</div>
+                    <img src="https://via.placeholder.com/400x250?text=2008年+Web化" alt="2008年 Web化">
+                    <div class="event-desc">オンラインプラットフォームを立ち上げ、お客様へ直接届くサービスを整備しました。</div>
+                </div>
+            </div>
+
+            <!-- 2010年代〜現在 -->
+            <div class="decade-section">
+                <div class="decade-header">
+                    <span class="decade-title">2010年代〜現在</span>
+                </div>
+
+                <div class="event-card left">
+                    <div class="event-year">2014年</div>
+                    <div class="event-title">創立50周年</div>
+                    <img src="https://via.placeholder.com/400x250?text=2014年+50周年" alt="2014年 50周年">
+                    <div class="event-desc">半世紀の節目の年を迎え、感謝を込めた感謝式典や記念事業を実施しました。</div>
+                </div>
+
+                <div class="event-card right">
+                    <div class="event-year">2024年</div>
+                    <div class="event-title">創立60周年と未来への躍進</div>
+                    <img src="https://via.placeholder.com/400x250?text=2024年+60周年" alt="2024年 60周年">
+                    <div class="event-desc">60周年を迎えた現在、持続可能な社会の実現に向け、新たなビジョンとともに未来へ挑み続けます。</div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- 文章下の右展開（横スクロール）並列ギャラリー -->
-    <div class="era-bottom-gallery">
-        <img src="IMG_6121.JPEG" alt="IMG_6121">
-        <img src="IMG_6790.JPEG" alt="IMG_6790">
-        <img src="IMG_0991.JPEG" alt="IMG_0991">
-        <img src="現在45630790_10156992337390712_7507680091279720448_n.jpg" alt="現在45630790_10156992337390712_7507680091279720448_n">
-        <img src="IMG_6788.JPEG" alt="IMG_6788">
-        <img src="IMG_1057.jpeg" alt="IMG_1057">
-        <img src="IMG_6792.JPEG" alt="IMG_6792">
-        <img src="IMG_2964.JPEG" alt="IMG_2964">
-        <img src="IMG_6397.JPEG" alt="IMG_6397">
-        <img src="IMG_6586.JPEG" alt="IMG_6586">
-        <img src="IMG_6617.JPG" alt="IMG_6617">
-        <img src="IMG_6797.JPEG" alt="IMG_6797">
-    </div>
-</section>
+</body>
+</html>
