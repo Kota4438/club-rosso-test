@@ -110,19 +110,24 @@
             text-align: justify;
         }
 
-        /* 画像スタイルの共通化（消えないように明示） */
-        .era-side-photo-col img, .era-side-photo-col video,
-        .era-left-photo-col img, .era-left-photo-col video,
-        .era-3col-left img, .era-3col-right img {
-            width: 100%;
+        /* 画像スタイル強制表示設定 */
+        img {
             max-width: 100%;
             height: auto;
-            min-height: 100px;
             display: block;
+        }
+
+        .era-side-photo-col img,
+        .era-left-photo-col img,
+        .era-3col-left img,
+        .era-3col-right img {
+            width: 100% !important;
+            height: 180px !important;
+            display: block !important;
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             object-fit: cover;
-            background-color: #f0f0f0;
+            background-color: #f2f2f2;
         }
 
         /* 文章下の横スクロールギャラリー */
@@ -136,16 +141,15 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .era-bottom-gallery img, .era-bottom-gallery video {
-            height: 160px;
-            width: auto;
-            min-width: 120px;
-            display: block;
+        .era-bottom-gallery img {
+            height: 160px !important;
+            width: 220px !important;
+            display: block !important;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             flex-shrink: 0;
             object-fit: cover;
-            background-color: #f0f0f0;
+            background-color: #f2f2f2;
         }
 
         /* 🎬 動画エリア */
@@ -222,9 +226,8 @@
             }
             .era-side-photo-col img, .era-left-photo-col img,
             .era-3col-left img, .era-3col-right img {
-                width: 180px;
-                min-width: 180px;
-                height: 130px;
+                width: 180px !important;
+                height: 130px !important;
                 flex-shrink: 0;
             }
         }
@@ -438,9 +441,9 @@
                             <p>しかし1997年11月、山一證券が自主廃業を発表。いわゆる「山一ショック」である。ロンドン現地でも激震が走り、金融機関の破綻という歴史の渦中に直接直面することとなった。この劇的な環境の変化を乗り越え、外資系金融機関への転身を果たし、国際金融マーケットでのキャリアをさらに深めていくこととなる。</p>
                         </div>
                         <div class="era-side-photo-col">
-                            <img src="IMG_6664.JPEG" alt="IMG_6664">
                             <img src="1990年代1.JPEG" alt="1990年代1">
                             <img src="1990年代2.JPEG" alt="1990年代2">
+                            <img src="IMG_6664.JPEG" alt="IMG_6664">
                         </div>
                     </div>
 
