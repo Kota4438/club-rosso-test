@@ -31,7 +31,7 @@
         /* 📌 インデックス（目次ナビゲーション） */
         .history-index-nav {
             margin: 0 auto 30px auto;
-            max-width: 750px;
+            max-width: 780px;
             padding: 15px 20px;
             background-color: #f9f9f9;
             border: 1px solid #e5e5e5;
@@ -39,33 +39,32 @@
         }
 
         .history-index-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #8b0000;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             text-align: center;
+            letter-spacing: 1px;
         }
 
         .history-index-list {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            flex-direction: column;
+            gap: 8px;
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
         .history-index-list li a {
-            display: inline-block;
-            padding: 6px 14px;
+            display: block;
+            padding: 8px 14px;
             background-color: #ffffff;
             color: #333;
             text-decoration: none;
             border: 1px solid #ccc;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
+            border-radius: 6px;
+            font-size: 0.92rem;
             transition: all 0.2s ease;
         }
 
@@ -73,6 +72,16 @@
             background-color: #8b0000;
             color: #ffffff;
             border-color: #8b0000;
+        }
+
+        .index-era {
+            font-weight: bold;
+            color: #8b0000;
+            margin-right: 8px;
+        }
+
+        .history-index-list li a:hover .index-era {
+            color: #ffffff;
         }
 
         /* 📷 顔写真エリア */
@@ -126,6 +135,30 @@
             margin-bottom: 20px;
         }
 
+        /* 📌 インデックスへ戻るボタン */
+        .back-to-index {
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .back-to-index a {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #666;
+            text-decoration: none;
+            background-color: #f2f2f2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            transition: all 0.2s ease;
+        }
+
+        .back-to-index a:hover {
+            background-color: #8b0000;
+            color: #ffffff;
+            border-color: #8b0000;
+        }
+
         /* 左2/3・右1/3 2カラム構造 (左文章・右写真) */
         .era-grid {
             display: flex;
@@ -160,7 +193,7 @@
 
         .era-side-photo-col img, .era-side-photo-col video {
             width: 100%;
-            height: auto;
+            height auto;
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             object-fit: cover;
@@ -400,16 +433,16 @@
             <h2 class="history-main-title">60年の歩み</h2>
 
             <!-- 📌 年代別インデックス (目次) -->
-            <div class="history-index-nav">
+            <div id="history-index" class="history-index-nav">
                 <div class="history-index-title">INDEX</div>
                 <ul class="history-index-list">
-                    <li><a href="#era-1960">1960年代</a></li>
-                    <li><a href="#era-1970">1970年代</a></li>
-                    <li><a href="#era-1980">1980年代</a></li>
-                    <li><a href="#era-1990">1990年代</a></li>
-                    <li><a href="#era-2000">2000年代</a></li>
-                    <li><a href="#era-2010">2010年代</a></li>
-                    <li><a href="#era-2020">2020年代</a></li>
+                    <li><a href="#era-1960"><span class="index-era">1960年代</span> ～原点～</a></li>
+                    <li><a href="#era-1970"><span class="index-era">1970年代</span> ～スポーツ少年から青春時代へ～</a></li>
+                    <li><a href="#era-1980"><span class="index-era">1980年代</span> ～高校‐大学、DJ音楽、そして人生の視野が広がる～</a></li>
+                    <li><a href="#era-1990"><span class="index-era">1990年代</span> ～金融の世界へ、そしてヨーロッパへ～</a></li>
+                    <li><a href="#era-2000"><span class="index-era">2000年代</span> ～グローバル金融の激動と帰国～</a></li>
+                    <li><a href="#era-2010"><span class="index-era">2010年代</span> ～新たなステージ・起業と挑戦～</a></li>
+                    <li><a href="#era-2020"><span class="index-era">2020年代</span> ～そして還暦へ・未来への躍進～</a></li>
                 </ul>
             </div>
 
@@ -500,6 +533,11 @@
                         <img src="原点IMG_5974.JPEG" alt="原点IMG_5974">
                         <img src="原点２IMG_5983.JPEG" alt="原点2IMG_5983">
                     </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
+                    </div>
                 </section>
 
                 <!-- 【1970年代 ～スポーツ少年から青春時代へ～】 -->
@@ -543,6 +581,11 @@
                         <img src="1970年代IMG_6164.JPEG" alt="1970年代IMG_6164">
                         <img src="IMG_6167.JPEG" alt="IMG_6167">
                         <img src="IMG_6154.JPEG" alt="IMG_6154">
+                    </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
                     </div>
                 </section>
 
@@ -610,6 +653,11 @@
                         <img src="IMG_6661.JPEG" alt="IMG_6661">
                         <img src="IMG_6650.JPEG" alt="IMG_6650">
                         <img src="IMG_6649.JPEG" alt="IMG_6649">
+                    </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
                     </div>
                 </section>
 
@@ -728,6 +776,11 @@
                             <img src="IMG_6686.JPEG" alt="IMG_6686">
                         </div>
                     </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
+                    </div>
                 </section>
 
                 <!-- 【後編ヘッダー】 -->
@@ -760,6 +813,11 @@
                         <img src="IMG_6696.JPEG" alt="IMG 6696">
                         <img src="IMG_6697.JPEG" alt="IMG 6697">
                     </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
+                    </div>
                 </section>
 
                 <!-- 【2010年代 ～新たなステージ・起業と挑戦～】 -->
@@ -788,6 +846,11 @@
                         <img src="DSC00356.JPG" alt="DSC00356">
                         <img src="P1050028.JPG" alt="P1050028">
                         <img src="P1050036.JPG" alt="P1050036">
+                    </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
                     </div>
                 </section>
 
@@ -818,6 +881,11 @@
                         <img src="IMG_6789.JPEG" alt="IMG 6789">
                         <img src="IMG_6790.JPEG" alt="IMG 6790">
                         <img src="IMG_6791.JPEG" alt="IMG 6791">
+                    </div>
+
+                    <!-- INDEXへ戻るボタン -->
+                    <div class="back-to-index">
+                        <a href="#history-index">▲ INDEXへ戻る</a>
                     </div>
                 </section>
 
