@@ -140,7 +140,7 @@
         }
 
         /* --------------------------------------------------
-            左1/3写真・中央1/3文章・右1/3写真 3カラム構造 (1980年代用)
+            左1/3写真・中央1/3文章・右1/3写真 3カラム構造
         -------------------------------------------------- */
         .era-3col-grid {
             display: flex;
@@ -161,6 +161,14 @@
             line-height: 1.85;
             color: #333;
             text-align: justify;
+        }
+
+        .era-3col-center p {
+            margin-bottom: 1.2em;
+        }
+
+        .era-3col-center p:last-child {
+            margin-bottom: 0;
         }
 
         .era-3col-right {
@@ -274,71 +282,6 @@
                 flex-shrink: 0;
             }
         }
-
-        /* 🎠 スライドショーの共通スタイル */
-        .slideshow-section {
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            margin-bottom: 35px;
-        }
-
-        .slideshow-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #8b0000;
-            margin-bottom: 15px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid #d4af37;
-            text-align: center;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 650px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            background: #000;
-        }
-
-        .slide-frame {
-            display: none;
-            width: 100%;
-        }
-
-        .slide-frame.active {
-            display: block;
-        }
-
-        .slide-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .prev-btn, .next-btn {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 12px 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.3s ease;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.4);
-            border: none;
-        }
-
-        .next-btn { right: 0; }
-        .prev-btn:hover, .next-btn:hover { background-color: rgba(139, 0, 0, 0.8); }
-
-        .back-to-top-btn { text-align: center; margin-top: 40px; }
-        .back-to-profile { color: #8b0000; font-weight: bold; text-decoration: underline; }
 
         /* 🎫 ナビゲーションバー：Ticketボタン */
         .btn-ticket {
@@ -674,6 +617,51 @@
                             <p>次なる舞台はロンドン現地法人だった。引受部の日系法人担当として、日本企業の欧州市場における資金調達を後押しする。</p>
                             <p>さらに、日本株チームと連携して、上場企業と海外の機関投資家を結びつける「コーポレートアクセス（通称IR）」を推進していった。</p>
                         </div>
+                    </div>
+                </section>
+
+                <!-- 【２０２６年現在 ～感謝を胸に、次の10年へ～】 -->
+                <section class="era-section">
+                    <h3 class="era-title">２０２６年現在 ～感謝を胸に、次の10年へ～</h3>
+
+                    <!-- 3カラム構造 (左1/3写真・中央1/3文章・右1/3写真) -->
+                    <div class="era-3col-grid">
+                        <!-- 左側写真 (1/3) -->
+                        <div class="era-3col-left">
+                            <img src="IMG_5650.JPG" alt="IMG_5650">
+                            <img src="IMG_6800.JPEG" alt="IMG_6800">
+                        </div>
+
+                        <!-- 中央文章 (1/3) -->
+                        <div class="era-3col-center">
+                            <p>現在はロンドンで個人事務所を運営しながら、妻・葉子と共に91歳の父・孝夫と89歳の母・太恵の介護を支える日々を送っている。また、京都で暮らす娘・真沙との毎月一泊二日の時間も、欠かせない大切なひとときだ。</p>
+                            <p>振り返れば、私の60年は整然とした一本の軌跡などではなく、幾多の経験と出会いに塗りつぶされた「点」の集積だった。</p>
+                            <p>スポーツに夢中だった少年時代、音楽に魅せられた青春、金融の世界での挑戦、海外生活、起業、結婚、離婚、そして新たな家族との出会い——。</p>
+                            <p>その一つひとつの点が今、意味を持って繋がり、現在の自分を形づくっている（Connecting the dots! by Steve Jobs）。</p>
+                            <p>これからも、多くの方々とのご縁と感謝を胸に、新しい歩みを続けていきたい。</p>
+                        </div>
+
+                        <!-- 右側写真 (1/3) -->
+                        <div class="era-3col-right">
+                            <img src="IMG_6789.JPEG" alt="IMG_6789">
+                            <img src="IMG_6791.JPEG" alt="IMG_6791">
+                        </div>
+                    </div>
+
+                    <!-- 文章下の並列ギャラリー（右展開スクロール） -->
+                    <div class="era-bottom-gallery">
+                        <img src="IMG_6121.JPEG" alt="IMG_6121">
+                        <img src="IMG_6790.JPEG" alt="IMG_6790">
+                        <img src="IMG_0991.JPEG" alt="IMG_0991">
+                        <img src="現在45630790_10156992337390712_7507680091279720448_n.jpg" alt="現在45630790_10156992337390712_7507680091279720448_n">
+                        <img src="IMG_6788.JPEG" alt="IMG_6788">
+                        <img src="IMG_1057.jpeg" alt="IMG_1057">
+                        <img src="IMG_6792.JPEG" alt="IMG_6792">
+                        <img src="IMG_2964.JPEG" alt="IMG_2964">
+                        <img src="IMG_6397.JPEG" alt="IMG_6397">
+                        <img src="IMG_6586.JPEG" alt="IMG_6586">
+                        <img src="IMG_6617.JPG" alt="IMG_6617">
+                        <img src="IMG_6797.JPEG" alt="IMG_6797">
                     </div>
                 </section>
 
