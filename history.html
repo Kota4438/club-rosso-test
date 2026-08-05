@@ -1120,9 +1120,9 @@
                <div style="margin-top: 40px;"></div>
 
 <!-- 5. 山一證券自主廃業 -->
-<div class="era-grid">
+<div class="era-grid" style="display: flex; flex-wrap: wrap; gap: 20px;">
     <!-- 左側：文章 (約2/3) -->
-    <div class="era-text-col">
+    <div class="era-text-col" style="flex: 2; min-width: 280px;">
         <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【山一證券自主廃業】</h4>
         <p>当時の橋本龍太郎内閣が掲げた「日本版金融ビッグバン」構想。その金融改革の大きなうねりの中で、ロンドン赴任から約2年が経とうとしていた1997年11月、私は日本の証券業界における歴史的な出来事に直面した。当時「四大証券」の一角を占めながら業界4位だった山一證券が、自主廃業を決断した。</p>
         <p>直前の決算では営業上は黒字（帳簿上ではあったが）であり、大蔵省のモニターの下、資金繰りの目途も整っていた。それにもかかわらず、一転して内閣からの指示により自主廃業を余儀なくされた――そう聞かされたのは後のことである。</p>
@@ -1142,27 +1142,35 @@
         <p>会社更生法による、いわゆる「倒産」とは異なり、自主廃業という形を選択したことで、金融当局による支援の元、経営陣が計画的に精算業務を進めてくれた。顧客資産は保護されて債権者へもほぼ完済、海外駐在員の帰国費用も自己負担せずに済んだ。また、会社都合退職として勤務8年分の退職金（20万円..）を受け取ることができた。会社への最後の小さな感謝だった。</p>
         <p>そして、この転機が新たな出会いを生む。</p>
     </div>
+
+    <!-- 右側：写真表示枠 (約1/3スペース) ※スマホ表示時は文章の下に自動で移動 -->
+    <div class="era-side-photo-col" style="flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 15px;">
+        <img src="IMG_6349.JPG" alt="山一證券 自主廃業ギャラリー1" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="IMG_6344.JPEG" alt="山一證券 自主廃業ギャラリー2" style="width: 100%; height: auto; object-fit: cover;">
+    </div>
 </div>
 
-<!-- 文章下：写真ギャラリー（右展開並列表示） -->
+<!-- 文章下：写真ギャラリー（残りの写真群・右展開並列表示） -->
 <div class="era-bottom-gallery" style="margin-top: 20px;">
-    <img src="IMG_6349.JPG" alt="山一證券 自主廃業ギャラリー1">
-    <img src="IMG_6344.JPEG" alt="山一證券 自主廃業ギャラリー2">
     <img src="IMG_6345.JPEG" alt="山一證券 自主廃業ギャラリー3">
     <img src="IMG_6346.JPEG" alt="山一證券 自主廃業ギャラリー4">
     <img src="IMG_6347.JPEG" alt="山一證券 自主廃業ギャラリー5">
     <img src="IMG_6348.JPEG" alt="山一證券 自主廃業ギャラリー6">
-    <img src="IMG_6350.JPEG" alt="山一證券 自主廃業ギャラリー7">
+    <img src="IMG_6350.JPEG" alt="山一證券 自主廃業ギャラリー7" onerror="this.onerror=null; this.src='IMG_6350.jpeg';">
 </div>
 
 <div style="margin-top: 40px;"></div>
     
-    <!-- 6. ソニーへ入社 -->
+<!-- 6. ソニー＆マネックス セクション -->
 <div class="era-section">
-    <!-- ソニー入社本文（前半） -->
-    <div class="era-right-text-col">
-        <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【ソニーへ入社】</h4>
-        <p>１９９８年春にソニーの財務部に新設された資本市場課へ入社。杉並区永福町に住まいを構えて、品川の本社へ通勤した。課はせいぜい４～５名の小所帯だったが、当時の上司は後のソニー会長・吉田健一郎氏、係長は現社長CEOの十時裕樹氏だった。</p>
+    
+    <!-- 【ソニーへ入社】 (右寄せ2/3文章レイアウト) -->
+    <div class="era-grid-reverse" style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <!-- 右側：文章 (約2/3スペース) -->
+        <div class="era-right-text-col" style="flex: 2; min-width: 280px;">
+            <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【ソニーへ入社】</h4>
+            <p>１９９８年春にソニーの財務部に新設された資本市場課へ入社。杉並区永福町に住まいを構えて、品川の本社へ通勤した。課はせいぜい４～５名の小所帯だったが、当時の上司は後のソニー会長・吉田健一郎氏、係長は現社長CEOの十時裕樹氏だった。</p>
+        </div>
     </div>
 
     <!-- ソニー文章下の写真（右展開並列表示） -->
@@ -1178,24 +1186,28 @@
         【温かかったソニー財務部同僚 | 小山専務ゴルフカップ優勝！】
     </p>
 
-    <!-- マネックス準備室本文（後半） -->
-    <div class="era-right-text-col" style="margin-top: 20px;">
-        <p>翌1999年春には、出井伸之会長の肝煎りの極秘プロジェクト「マネックス」準備室に、志願兵として参画。この新会社立案者で、個人でソニーと共同出資した松本大氏（当時ゴールドマンサックス本社ゼネラルパートナーで現マネックスグループ会長）と彼の部下３名と、神田錦町竹橋安田ビルの一室で日本のインターネット証券黎明期に立ち会うこととなる。</p>
+    <!-- 【マネックス準備室】 (左寄せ2/3文章 + 右1/3写真3枚) -->
+    <div class="era-grid" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
+        <!-- 左側：文章 (約2/3スペース) -->
+        <div class="era-left-text-col" style="flex: 2; min-width: 280px;">
+            <p>翌1999年春には、出井伸之会長の肝煎りの極秘プロジェクト「マネックス」準備室に、志願兵として参画。この新会社立案者で、個人でソニーと共同出資した松本大氏（当時ゴールドマンサックス本社ゼネラルパートナーで現マネックスグループ会長）と彼の部下３名と、神田錦町竹橋安田ビルの一室で日本のインターネット証券黎明期に立ち会うこととなる。</p>
+        </div>
+
+        <!-- 右側：追加写真3枚 (約1/3スペース) -->
+        <div class="era-side-photo-col" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px;">
+            <img src="IMG_0101.JPG" alt="マネックス関連1" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="IMG_0173.JPG" alt="マネックス関連2" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="IMG_3380.JPG" alt="マネックス関連3" style="width: 100%; height: auto; object-fit: cover;">
+        </div>
     </div>
 </div>
 
-<!-- 文章下：写真・動画ギャラリー（右展開並列表示） -->
+<!-- 文章下：写真ギャラリー（右展開並列表示 / 4枚指定） -->
 <div class="era-bottom-gallery" style="margin-top: 20px;">
-    <img src="Monex4.JPEG" alt="マネックス4">
-    <video controls playsinline preload="metadata">
-        <source src="Monex_FOCUS_slideshow_v2.mp4#t=0.001" type="video/mp4">
-        <source src="Monex_FOCUS_slideshow_v2.mp4" type="video/mp4">
-        お使いのブラウザは動画の再生に対応していません。
-    </video>
     <img src="IMG_6386.JPEG" alt="ソニー時代1">
     <img src="IMG_6389.JPEG" alt="ソニー時代2">
     <img src="IMG_6384.JPEG" alt="ソニー時代3">
-    <img src="IMG_3380.JPG" alt="ソニー時代4">
+    <img src="Ikemen..JPG" alt="ソニー時代3">
 </div>
 
 <!-- INDEXへ戻るボタン -->
@@ -1205,34 +1217,6 @@
 
 <div style="margin-top: 40px;"></div>
 
-
-    
-    <!-- マネックス準備室本文（後半） -->
-    <div class="era-right-text-col" style="margin-top: 15px;">
-        <p>翌1999年春には、出井伸之会長の肝煎りの極秘プロジェクト「マネックス」準備室に、志願兵として参画。この新会社立案者で、個人でソニーと共同出資した松本大氏（当時ゴールドマンサックス本社ゼネラルパートナーで現マネックスグループ会長）と彼の部下３名と、神田錦町竹橋安田ビルの一室で日本のインターネット証券黎明期に立ち会うこととなる。</p>
-    </div>
-</div>
-
-<!-- 文章下：写真・動画ギャラリー（ソニー写真と同サイズに調整） -->
-<div style="margin-top: 20px;">
-    <div class="era-bottom-gallery" style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <img src="Monex4.JPEG" alt="マネックス4" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-        <video controls playsinline preload="metadata" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-            <source src="Monex_FOCUS_slideshow_v2.mp4#t=0.001" type="video/mp4">
-            <source src="Monex_FOCUS_slideshow_v2.mp4" type="video/mp4">
-            お使いのブラウザは動画の再生に対応していません。
-        </video>
-        <img src="IMG_6386.JPEG" alt="ソニー時代1" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-        <img src="IMG_6389.JPEG" alt="ソニー時代2" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-        <img src="IMG_6384.JPEG" alt="ソニー時代3" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-        <img src="IMG_3380.JPG" alt="ソニー時代4" style="width: 100%; max-width: 250px; height: auto; object-fit: cover;">
-    </div>
-</div>
-
-<!-- INDEXへ戻るボタン -->
-<div class="back-to-index" style="margin-top: 20px;">
-    <a href="#history-index">▲ INDEXへ戻る</a>
-</div>
     
                 <!-- 【2000年代 ～再びロンドンへ～】 -->
                 <section id="era-2000" class="era-section">
