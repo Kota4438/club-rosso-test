@@ -1260,12 +1260,12 @@
 
 <!-- 社内報エリア -->
 <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
-    <!-- 写真エリア（PC: 横並び / スマホ: 縦並び） -->
-    <div class="era-side-photo-col" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <img src="MMC1.JPEG" alt="MMC1" style="width: 100%; max-width: 48%; min-width: 250px; height: auto;">  
-        <img src="MMC2.JPEG" alt="MMC2" style="width: 100%; max-width: 48%; min-width: 250px; height: auto;">
+    <!-- 写真エリア（PC・タブレット: 横並び / 画面が狭いスマホ: 縦並び） -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <img src="MMC1.JPEG" alt="MMC1" style="flex: 1 1 200px; max-width: 48%; height: auto; object-fit: contain;">  
+        <img src="MMC2.JPEG" alt="MMC2" style="flex: 1 1 200px; max-width: 48%; height: auto; object-fit: contain;">
     </div>
-    <!-- キャプション（写真の下に表示） -->
+    <!-- キャプション（写真の下） -->
     <p style="margin-top: 12px; font-size: 0.85em; color: #555; font-weight: bold;">
         【三菱マテリアル社内報 2006年8月号】
     </p>
@@ -1283,7 +1283,6 @@
         <img src="IMG_6819.JPEG" alt="IMG 6819">                        
         <img src="IMG_6820.JPEG" alt="IMG 6820">                      
         <img src="IMG_6831.JPEG" alt="IMG 6831">                      
-        <img src="IMG_6846.JPEG" alt="IMG 6846">                      
         <img src="P1020323.JPG" alt="P1020323">                      
         <img src="P1020830.JPG" alt="P1020830">                  
         <img src="P1030390.JPG" alt="P1030390">                  
@@ -1297,24 +1296,10 @@
                         <a href="#history-index">▲ INDEXへ戻る</a>
                     </div>
                 </section>
-
-              FT ESG 告知広告 20190206.png
-
     
                        <!-- ② 真丘奈央とあらたな出会い（左右入れ替え：左1/3写真、右2/3文章） -->
 <div class="era-grid-reverse" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
     
-    <!-- 左側：写真枠 (約1/3スペース) -->
-    <div class="era-left-photo-col" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px;">
-        <img src="Maebashi.jpg" alt="Maebashi" style="width: 100%; height: auto;">
-        <img src="472311341_10162922364810712_8932746583602231686_n.jpg" alt="Photo" style="width: 100%; height: auto;">
-        <img src="IMG_6787.JPEG" alt="IMG_6787" style="width: 100%; height: auto;">
-        <img src="495743370_4034581073423430_325035310715309287_n.jpg" alt="Photo" style="width: 100%; height: auto;">
-        <img src="IMG_1354.JPG" alt="IMG_1354" style="width: 100%; height: auto;">
-        <img src="dcd388cfc8f48eb39e2562906dede395.jpg" alt="Photo" style="width: 100%; height: auto;">
-        <img src="上毛新聞記事_2017年2月27日.jpg" alt="上毛新聞記事 2017年" style="width: 100%; height: auto;">
-    </div>
-
     <!-- 右側：文章 (約2/3スペース) -->
     <div class="era-right-text-col" style="flex: 2; min-width: 280px;">
         <h4 style="font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; color: #1a1a1a;">【真丘奈央とあらたな出会い】</h4>
@@ -1331,20 +1316,36 @@
         <p>百数十年の時を経て、その子孫である私たちが夫婦となった。独立して地域の発展に尽くした先祖同士にも浅からぬご縁があったことを知り、言葉では表せないほどの感動と驚きを覚えた。</p>
     </div>
 </div>
-
-<!-- 追加写真・キャプション表示エリア -->
-<div class="era-mid-photo-block" style="margin-top: 25px; text-align: center;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <img src="HJW18_Amemiya_Sun_AME0914.jpg" alt="HJW18_Amemiya_Sun_AME0914" style="max-width: 30%; height: auto;">
-        <img src="DSC00356.JPG" alt="DSC00356" style="max-width: 30%; height: auto;">
-        <img src="Koinoyamatoji2.jpg" alt="Koinoyamatoji2" style="max-width: 30%; height: auto;">
-        <img src="P1050028.JPG" alt="P1050028" style="max-width: 30%; height: auto;">
-        <img src="DSC00339.JPG" alt="DSC00339" style="max-width: 30%; height: auto;">
-        <img src="P1050036.JPG" alt="P1050036" style="max-width: 30%; height: auto;">
-        <img src="P1050043.JPG" alt="P1050043" style="max-width: 30%; height: auto;">
-        <img src="P1050127.JPG" alt="P1050127" style="max-width: 30%; height: auto;">
-        <img src="IMG_6827.JPEG" alt="IMG_6827" style="max-width: 30%; height: auto;">
+    <!-- 左側：写真枠 (約1/3スペース) -->
+    <div class="era-left-photo-col" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px;">
+        <img src="Maebashi.jpg" alt="Maebashi" style="width: 100%; height: auto;">
+        <img src="472311341_10162922364810712_8932746583602231686_n.jpg" alt="Photo" style="width: 100%; height: auto;">
+        <img src="IMG_6787.JPEG" alt="IMG_6787" style="width: 100%; height: auto;">
+        <img src="495743370_4034581073423430_325035310715309287_n.jpg" alt="Photo" style="width: 100%; height: auto;">
+        <img src="IMG_1354.JPG" alt="IMG_1354" style="width: 100%; height: auto;">
+        <img src="dcd388cfc8f48eb39e2562906dede395.jpg" alt="Photo" style="width: 100%; height: auto;">
+        <img src="上毛新聞記事_2017年2月27日.jpg" alt="上毛新聞記事 2017年" style="width: 100%; height: auto;">
     </div>
+
+<!-- 写真ギャラリー・キャプション表示エリア -->
+<div class="era-mid-photo-block" style="margin-top: 25px; text-align: center;">
+    <!-- 横展開ギャラリー（横スクロール表示） -->
+    <div class="era-bottom-gallery">
+        <img src="HJW18_Amemiya_Sun_AME0914.jpg" alt="HJW18_Amemiya_Sun_AME0914">
+        <img src="DSC00356.JPG" alt="DSC00356">
+        <img src="Koinoyamatoji2.jpg" alt="Koinoyamatoji2">
+        <img src="P1050028.JPG" alt="P1050028">
+        <img src="DSC00339.JPG" alt="DSC00339">
+        <img src="P1050036.JPG" alt="P1050036">
+        <img src="P1050043.JPG" alt="P1050043">
+        <img src="P1050127.JPG" alt="P1050127">
+        <img src="IMG_6827.JPEG" alt="IMG_6827">
+    </div>
+
+    <!-- キャプション -->
+    <p style="margin-top: 10px; font-size: 0.85em; color: #555; font-weight: bold;">
+        【ロンドンHyper Japanフェスティバル | 2016 ＆ 2018】
+    </p>
 </div>
 
 <!-- 2010年代 ギャラリー -->
@@ -1359,16 +1360,18 @@
     <img src="att.pV5ofmR32EMdK9IyFPTQ1QHuSHGDnp7EK25qtZpNr9w.jpg" alt="Photo">
     <img src="att.r3QobstfMzQmqNKukc-aylw3wJ-l8uzGNcsg-2vVybM.jpg" alt="Photo">
 
-    <!-- 前橋市長山本龍氏のSNS投稿記事 キャプション付き表示 -->
-    <div style="width: 100%; margin-top: 15px; text-align: center;">
-        <div style="display: flex; justify-content: center; gap: 10px;">
-            <img src="IMG_6785.JPEG" alt="IMG_6785" style="max-width: 48%; height: auto;">
-            <img src="IMG_6786.JPEG" alt="IMG_6786" style="max-width: 48%; height: auto;">
-        </div>
-        <p style="margin-top: 8px; font-size: 0.85em; color: #555; font-weight: bold;">
-            【当時の前橋市長山本龍氏のSNS投稿記事】
-        </p>
+<!-- 前橋市長山本龍氏のSNS投稿記事 キャプション付き表示 -->
+<div style="width: 100%; margin-top: 20px; text-align: center;">
+    <!-- 写真表示エリア（PC: 横並び / スマホ: 縦並び） -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 100%;">
+        <img src="IMG_6785.JPEG" alt="IMG_6785" style="flex: 1 1 200px; max-width: 48%; height: auto; object-fit: contain;">
+        <img src="IMG_6786.JPEG" alt="IMG_6786" style="flex: 1 1 200px; max-width: 48%; height: auto; object-fit: contain;">
     </div>
+    
+    <!-- 2枚の写真の下に横幅いっぱいに跨がるキャプション -->
+    <p style="width: 100%; margin-top: 12px; font-size: 0.85em; color: #555; font-weight: bold; text-align: center; clear: both;">
+        【当時の前橋市長山本龍氏のSNS投稿記事】
+    </p>
 </div>
     
                     <!-- INDEXへ戻るボタン -->
