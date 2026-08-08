@@ -1560,7 +1560,7 @@
                     <img src="472311341_10162922364810712_8932746583602231686_n.jpg" alt="Photo" style="width: 100%; height: auto; border-radius: 4px;">
                     <img src="IMG_6787.JPEG" alt="IMG_6787" style="width: 100%; height: auto; border-radius: 4px;">
                     <img src="495743370_4034581073423430_325035310715309287_n.jpg" alt="Photo" style="width: 100%; height: auto; border-radius: 4px;">
-                    <img src="IMG_1354.JPG" alt="IMG_1354" style="width: 100%; height: auto; border-radius: 4px;">
+　　　　　　　　　　　<img src="unnamed.jpg" alt="真丘奈央とのあらたな出会い" style="width: 100%; height: auto; border-radius: 6px; display: block;" onerror="this.onerror=null; this.src='unnamed.JPEG';">
                     <img src="dcd388cfc8f48eb39e2562906dede395.jpg" alt="Photo" style="width: 100%; height: auto; border-radius: 4px;">
                     <img src="上毛新聞記事_2017年2月27日.jpg" alt="上毛新聞記事 2017年" style="width: 100%; height: auto; border-radius: 4px;">
                 </div>
@@ -1663,8 +1663,8 @@
                 <!-- 右側：写真表示枠 (約1/3スペース) ※写真切り欠け防止対応 -->
                 <div class="era-side-photo-col" style="flex: 1 1 220px; max-width: 320px; display: flex; flex-direction: column; gap: 12px; order: -1; box-sizing: border-box;">
                     <!-- スマホ表示の並び順調整のため order:-1 を追加 -->
-                    <img src="44253201_10156942617250712_523119401675784192_n.jpg" alt="MJ" style="width: 100%; height: auto; object-fit: contain; border-radius: 6px; display: block;">
                     <img src="44030846_10156932383710712_8085578364842147840_n.jpg" alt="MJ" style="width: 100%; height: auto; object-fit: contain; border-radius: 6px; display: block;">
+                    <img src="44253201_10156942617250712_523119401675784192_n.jpg" alt="MJ" style="width: 100%; height: auto; object-fit: contain; border-radius: 6px; display: block;">
                     <img src="IMG_2684.JPG" alt="MJ" style="width: 100%; height: auto; object-fit: contain; border-radius: 6px; display: block;">
                 </div>
             </div>
@@ -1734,29 +1734,38 @@
                     <p>これまで支えてくださった多くの方々とのご縁に、心から感謝を込めて。</p>
                 </div>                </div>
 
-　　　　　　　　<!-- 右側：写真表示枠 (約1/3スペース) -->
-　　　　　　　　<div class="era-side-photo-col" style="flex: 1; min-width: 220px; max-width: 320px; display: flex; flex-direction: column; gap: 12px;">
+　<!-- 右側：写真表示枠 (約1/3スペース) -->
+<div class="era-side-photo-col" style="flex: 1; min-width: 220px; max-width: 320px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box;">
     
-    <!-- 1枚目：通常写真 -->
-    <img src="IMG_5650.JPG" alt="IMG_5650" style="width: 100%; height: auto; border-radius: 4px;">
+    <!-- 通常写真1枚目 -->
+    <img src="IMG_5650.JPG" alt="IMG_5650" style="width: 100%; height: auto; border-radius: 4px; display: block;">
 
-    <!-- 2枚目：コラージュ（複合写真枠） -->
-    <div class="side-collage-container">
-        <div class="photo-grid-pattern2">
-            <div class="grid-item main-item">
-                <img src="IMG_6105.jpg" alt="Main Photo">
+    <!-- コラージュ（複合写真枠） -->
+    <div style="width: 100%; background: #fff; padding: 6px; border-radius: 6px; box-shadow: 0 1px 5px rgba(0,0,0,0.12); box-sizing: border-box;">
+        <div style="display: flex; gap: 4px; width: 100%; height: 220px;">
+            
+            <!-- 左半分：メイン写真 (1枚) -->
+            <div style="flex: 1; height: 100%; overflow: hidden; border-radius: 3px; background: #f0f0f0;">
+                <img src="IMG_6105.jpg" alt="Main Photo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
-            <div class="grid-item"><img src="IMG_6986.JPEG" alt="Sub Photo 1"></div>
-            <div class="grid-item"><img src="IMG_6991.JPEG" alt="Sub Photo 2"></div>
-            <div class="grid-item"><img src="IMG_6987.JPEG" alt="Sub Photo 3"></div>
-            <div class="grid-item"><img src="IMG_6829.JPEG" alt="Sub Photo 4"></div>
-            <div class="grid-item wide-item"><img src="IMG_6154.jpg" alt="Sub Photo 5"></div>
+
+            <!-- 右半分：サブ写真 (5枚のグリッド) -->
+            <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 4px; height: 100%;">
+                <div style="overflow: hidden; border-radius: 3px; background: #f0f0f0;"><img src="IMG_6986.JPEG" alt="Sub Photo 1" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="overflow: hidden; border-radius: 3px; background: #f0f0f0;"><img src="IMG_6991.JPEG" alt="Sub Photo 2" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="overflow: hidden; border-radius: 3px; background: #f0f0f0;"><img src="IMG_6987.JPEG" alt="Sub Photo 3" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="overflow: hidden; border-radius: 3px; background: #f0f0f0;"><img src="IMG_6829.JPEG" alt="Sub Photo 4" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <!-- 5枚目のサブ写真は右下の2列分を横幅いっぱいに使う -->
+                <div style="grid-column: span 2; overflow: hidden; border-radius: 3px; background: #f0f0f0;"><img src="IMG_6154.jpg" alt="Sub Photo 5" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            </div>
+
         </div>
     </div>
 
-    <!-- 3枚目：通常写真 -->
-    <img src="IMG_6826.JPEG" alt="IMG_6826" style="width: 100%; height: auto; border-radius: 4px;">
+    <!-- 通常写真2枚目 -->
+    <img src="IMG_6826.JPEG" alt="IMG_6826" style="width: 100%; height: auto; border-radius: 4px; display: block;">
 
+</div>
 </div>
 
 <style>
@@ -1811,17 +1820,22 @@
 }
 </style>
             
-    <!-- 2020年代 ギャラリー（確実な横スクロール設定） -->
-    <div class="era-mid-photo-block" style="margin-top: 20px; text-align: center;">
-        <div class="era-bottom-gallery" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 10px; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
-            <img src="IMG_0991.JPEG" alt="IMG 0991" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-            <img src="IMG_6789.JPEG" alt="IMG 6789" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-            <img src="IMG_6586.JPEG" alt="IMG 6586" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-            <img src="45630790_10156992337390712_7507680091279720448_n.jpg" alt="現在" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-            <img src="IMG_6791.JPEG" alt="IMG 6791" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-            <img src="IMG_6985.JPEG" alt="IMG 6985" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;">
-        </div>
+<!-- 2020年代 ギャラリー -->
+<div class="era-mid-photo-block" style="margin-top: 20px; text-align: center;">
+    <div class="era-bottom-gallery" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 10px; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
+        <img src="IMG_0991.JPEG" alt="IMG 0991" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='IMG_0991.jpg';">
+        <img src="IMG_6789.JPEG" alt="IMG 6789" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='IMG_6789.jpg';">
+        <img src="IMG_6586.JPEG" alt="IMG 6586" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='IMG_6586.jpg';">
+        
+        <!-- ファイル名の文字化けやパスエラー対策を追加 -->
+        <img src="45630790_10156992337390712_7507680091279720448_n.jpg" alt="現在" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='45630790_10156992337390712_7507680091279720448_n.JPEG';">
+        
+        <img src="IMG_6791.JPEG" alt="IMG 6791" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='IMG_6791.jpg';">
+        
+        <!-- IMG_6985 表示対応 -->
+        <img src="IMG_6985.JPEG" alt="IMG 6985" style="height: 180px; width: auto; flex-shrink: 0; object-fit: cover;" onerror="this.onerror=null; this.src='IMG_6985.jpg';">
     </div>
+</div>
             
             <!-- INDEXへ戻るボタン -->
             <div class="back-to-index" style="margin-top: 20px;">
