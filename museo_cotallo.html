@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Museo Cotallo - コタロ美術館 -</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #111;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #c5a059;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #c5a059;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 10px 0 0;
+            color: #aaa;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .gallery-section {
+            margin-bottom: 60px;
+        }
+        .gallery-section h2 {
+            border-bottom: 1px solid #c5a059;
+            padding-bottom: 10px;
+            color: #c5a059;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: #262626;
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .card-desc {
+            margin: 0;
+            font-size: 0.95em;
+            color: #bbb;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #111;
+            color: #777;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MUSEO COTALLO</h1>
+        <p>コタロ美術館 ── 彫刻と模型のコレクション</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 彫刻の制作工程セクション -->
+        <div class="gallery-section">
+            <h2>Sculpture Process / 制作の軌跡</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="469018121_10162749534450712_5716346131709487043_n.jpg" alt="芯材の制作">
+                    <div class="card-content">
+                        <h3 class="card-title">骨組みの構築</h3>
+                        <p class="card-desc">新聞紙とアルミホイルを用いて、ダイナミックな獣のシルエットのベースを作り上げます。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="468875729_10162749534445712_4568913595662676744_n.jpg" alt="造形途中">
+                    <div class="card-content">
+                        <h3 class="card-title">粘土による肉付け</h3>
+                        <p class="card-desc">しなやかな筋肉の起伏や、躍動感のあるポージングを粘土で丁寧に彫り出していく段階です。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="469015509_10162749535465712_3443233217257168929_n.jpg" alt="乾燥・調整中">
+                    <div class="card-content">
+                        <h3 class="card-title">乾燥とフォルムの確認</h3>
+                        <p class="card-desc">複数の個体が並び、それぞれの角度からシルエットやバランス入念にチェックします。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="468945584_10162749533500712_1848640891381154864_n.jpg" alt="細部の彩色">
+                    <div class="card-content">
+                        <h3 class="card-title">彩色のこだわり</h3>
+                        <p class="card-desc">白亜のボディに、たてがみや細部へゴールドやブラウンの繊細なグラデーションを施します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 完成作品・展示セクション -->
+        <div class="gallery-section">
+            <h2>Collection / 完成作品・展示</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="30f39f228102923a924eebd2afb535dc.jpeg" alt="ライオンの彫刻（台座付き）">
+                    <div class="card-content">
+                        <h3 class="card-title">眠れる獅子（ブロンズ調）</h3>
+                        <p class="card-desc">重厚な色合いに仕上げられたライオン像。大理石調の特製ベースが作品を引き立てます。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="469091531_10162749534425712_7506791549416418196_n.jpg" alt="展示風景">
+                    <div class="card-content">
+                        <h3 class="card-title">美術館の一角にて</h3>
+                        <p class="card-desc">伝統的な和の佇まいや他のフィギュア作品と共に並ぶ、趣深いミュージアムのディスプレイ。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="24b5b2c2a64b9cdcc6ddef905798fa16.jpeg" alt="暖炉の間の展示">
+                    <div class="card-content">
+                        <h3 class="card-title">大理石の壁面と獅子</h3>
+                        <p class="card-desc">美しい大理石の暖炉を背景に配置された、気品あふれる猛獣のレリーフ・オブジェ。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="471409874_10162867746240712_8955870502865753089_n.jpg" alt="モデルカーとミリタリー模型">
+                    <div class="card-content">
+                        <h3 class="card-title">クラシックレーシング＆ビークル</h3>
+                        <p class="card-desc">細部までリアルなウェザリング（汚し塗装）が施された、こだわりの自動車・ミリタリー模型コレクション。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Museo Cotallo All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
