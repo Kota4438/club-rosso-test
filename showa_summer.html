@@ -138,10 +138,16 @@
             <div class="photo-item">
                 <img src="１２.JPEG" alt="ビーチ">
                 <p class="photo-caption">従兄弟とがんばるマンポーズ</p>
-            </div>
-            <div class="photo-item">
-                <img src="２０.JPEG"><img src="２１.JPEG"><img src="２２.JPEG"><img src="２３.JPEG"><img src="２４.JPEG">
-                <p class="photo-caption">小学生の近所の友達らと山間キャンプ</p>
+           <div class="photo-item" style="margin-bottom: 20px;">
+                <!-- 画像を並べるコンテナ：flex と flex-wrap で横並び＆自動改行を実現 -->
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; align-items: center;">
+                    <img src="２０.JPEG" alt="キャンプ写真1" style="width: 180px; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src="２１.JPEG" alt="キャンプ写真2" style="width: 180px; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src="２２.JPEG" alt="キャンプ写真3" style="width: 180px; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src="２３.JPEG" alt="キャンプ写真4" style="width: 180px; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src="２４.JPEG" alt="キャンプ写真5" style="width: 180px; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                </div>
+                <p class="photo-caption" style="margin-top: 10px;">小学生の近所の友達らと山間キャンプ</p>
             </div>
             <div class="photo-item">
                 <img src="２６.JPEG"><img src="２７.JPEG">
