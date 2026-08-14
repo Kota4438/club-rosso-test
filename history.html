@@ -1824,21 +1824,34 @@
         </div>
     </div>
 
-    <!-- 文章下のギャラリー（右スライド展開・横スクロール型） -->
+<!-- 文章下のギャラリー（右スライド展開・横スクロール型） -->
     <div class="era-gallery-container" style="margin-top: 30px;">
         <h4 style="font-size: 1rem; margin-bottom: 15px; color: #555; border-left: 3px solid #0056b3; padding-left: 8px;"></h4>
-        <div class="horizontal-slider" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 15px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
-            <div style="flex: 0 0 240px; scroll-snap-align: start;"><img src="IMG_6791.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"></div>
-            <div style="flex: 0 0 240px; scroll-snap-align: start;"><img src="IMG_7099.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"></div>
-            <div style="flex: 0 0 240px; scroll-snap-align: start;"><img src="現在45630790_10156992337390712_7507680091279720448_n.jpg" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"></div>
+        <div class="horizontal-slider" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 15px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab;">
             
-            <!-- ▼ IMG_6586.JPEG の部分：object-fit を contain に変更し、余白が気になる場合は背景色を設定できます ▼ -->
-            <div style="flex: 0 0 240px; scroll-snap-align: start;"><img src="IMG_6586.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: contain; background-color: #f9f9f9; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"></div>
+            <!-- 各画像のスタイルを共通化（height: 160px / object-fit: cover） -->
+            <div style="flex: 0 0 240px; scroll-snap-align: start;">
+                <img src="IMG_6791.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex: 0 0 240px; scroll-snap-align: start;">
+                <img src="IMG_7099.jpg" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex: 0 0 240px; scroll-snap-align: start;">
+                <img src="現在45630790_10156992337390712_7507680091279720448_n.jpg" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
+            
+            <!-- 修正箇所：IMG_6586.JPEG -->
+            <!-- object-fit: cover にし、中心合わせを行うことで余白をなくし全体を埋めます -->
+            <div style="flex: 0 0 240px; scroll-snap-align: start;">
+                <img src="IMG_6586.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; object-position: center center; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
 
-            <div style="flex: 0 0 240px; scroll-snap-align: start;"><img src="IMG_9668.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"></div>
+            <div style="flex: 0 0 240px; scroll-snap-align: start;">
+                <img src="IMG_9668.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
         </div>
     </div>
-
+    
     <div class="back-to-index" style="margin-top: 30px; text-align: center;">
         <a href="#history-index" style="text-decoration: none; color: #0056b3; font-weight: bold;">▲ INDEXへ戻る</a>
     </div>
