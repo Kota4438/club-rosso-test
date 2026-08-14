@@ -1827,9 +1827,9 @@
 <!-- 文章下のギャラリー（右スライド展開・横スクロール型） -->
     <div class="era-gallery-container" style="margin-top: 30px;">
         <h4 style="font-size: 1rem; margin-bottom: 15px; color: #555; border-left: 3px solid #0056b3; padding-left: 8px;"></h4>
-        <div class="horizontal-slider" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 15px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab;">
+        <div class="horizontal-slider" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 15px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
             
-            <!-- 各画像のスタイルを共通化（height: 160px / object-fit: cover） -->
+            <!-- 他の通常写真は cover で表示 -->
             <div style="flex: 0 0 240px; scroll-snap-align: start;">
                 <img src="IMG_6791.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
             </div>
@@ -1841,13 +1841,13 @@
             </div>
             
             <!-- 修正箇所：IMG_6586.JPEG -->
-            <!-- object-fit: cover にし、中心合わせを行うことで余白をなくし全体を埋めます -->
-            <div style="flex: 0 0 240px; scroll-snap-align: start;">
-                <img src="IMG_6586.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; object-position: center center; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <!-- object-fit: contain にし、背景色を設定することで余白を「枠の一部」として馴染ませます -->
+            <div style="flex: 0 0 240px; scroll-snap-align: start; background-color: #ffffff; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="IMG_6586.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: contain; padding: 5px; box-sizing: border-box;">
             </div>
 
             <div style="flex: 0 0 240px; scroll-snap-align: start;">
-                <img src="IMG_9668.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="IMG_3255.JPEG" alt="ギャラリー写真" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
             </div>
         </div>
     </div>
